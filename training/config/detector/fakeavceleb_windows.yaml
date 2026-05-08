@@ -1,0 +1,68 @@
+log_dir: ./logs_fakeavceleb
+
+pretrained: 'None'
+model_name: AudioFakeDetector
+backbone_name: rawnet2
+encoder_feat_dim: 1024
+
+backbone_config:
+  num_classes: 2
+  device: 'cpu'  # set to 0 if you want GPU and your setup supports it
+  margin: 2
+  nb_samp: 64000
+  first_conv: 128
+  in_channels: 1
+  filts: [128, [128, 128], [128, 512], [512, 512]]
+  blocks: [2, 4]
+  nb_fc_node: 1024
+  gru_node: 1024
+  nb_gru_layer: 3
+  nb_classes: 2
+
+dataset_type: pair-audio
+train_dataset: [FakeAVCeleb]
+test_dataset: [FakeAVCeleb]
+train_file: ./_lists_fakeavceleb/fakeavceleb_train.list
+dev_file: ./_lists_fakeavceleb/fakeavceleb_dev.list
+test_file: ./_lists_fakeavceleb/fakeavceleb_test.list
+
+train_batchSize: 8
+test_batchSize: 8
+workers: 0
+
+optimizer:
+  type: adam
+  adam:
+    lr: 0.0002
+    beta1: 0.9
+    beta2: 0.999
+    eps: 0.00000001
+    weight_decay: 0.0005
+    amsgrad: false
+
+lr_scheduler: null
+nEpochs: 2
+start_epoch: 0
+manualSeed: 1024
+
+loss_func:
+  cls_loss: cross_entropy
+  spe_loss: cross_entropy
+  con_loss: contrastive_regularization
+  rec_loss: l1loss
+
+metric_scoring: auc
+ngpu: 1
+cuda: false
+cudnn: false
+
+sam_param:
+  rho: 0.07
+  use_adaptive_sam: false
+
+mi_param:
+  mi_turn_on: true
+  mi_mode: 'fd'
+  mi_mode_measure: 'DV'
+  mi_lambda: 0.03
+

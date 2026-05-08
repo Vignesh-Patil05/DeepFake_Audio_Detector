@@ -1,0 +1,9 @@
+.venv/
+FakeAVCeleb_v1.2/
+datasets/
+__pycache__/
+*.tar
+*.pth
+training/_smoke_logs/
+training/_fakeavceleb_wav16k/
+training/logs_fakeavceleb/

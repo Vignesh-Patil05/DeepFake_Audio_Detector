@@ -1,0 +1,4 @@
+C:\Users\vishu\AI-Synthesized-Voice-Generalization-main\training\_smoke_data\wav\real_0.wav,0,real
+C:\Users\vishu\AI-Synthesized-Voice-Generalization-main\training\_smoke_data\wav\real_1.wav,0,real
+C:\Users\vishu\AI-Synthesized-Voice-Generalization-main\training\_smoke_data\wav\fake_0.wav,1,gan1
+C:\Users\vishu\AI-Synthesized-Voice-Generalization-main\training\_smoke_data\wav\fake_1.wav,2,gan2

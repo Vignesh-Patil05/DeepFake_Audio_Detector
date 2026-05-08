@@ -1,0 +1,87 @@
+log_dir: ./_smoke_logs
+tsne_fl: null
+
+# model setting
+pretrained: 'None'
+model_name: AudioFakeDetector
+backbone_name: rawnet2
+encoder_feat_dim: 1024
+
+# backbone setting (RawNet2)
+backbone_config:
+  mode: adjust_channel
+  num_classes: 2
+  inc: 3
+  dropout: false
+  device: 'cpu'
+  margin: 2
+  nb_samp: 64000
+  first_conv: 128
+  in_channels: 1
+  filts: [128, [128, 128], [128, 512], [512, 512]]
+  blocks: [2, 4]
+  nb_fc_node: 1024
+  gru_node: 1024
+  nb_gru_layer: 3
+  nb_classes: 2
+
+# dataset
+dataset_type: pair-audio
+train_dataset: [LibriSeVoc]
+test_dataset: [LibriSeVoc]
+train_file: ./_smoke_data/train.list
+dev_file: ./_smoke_data/dev.list
+test_file: ./_smoke_data/test.list
+
+train_batchSize: 4
+test_batchSize: 4
+workers: 0
+
+# label settings (not used by pairDatasetAudio beyond binary label)
+label_dict: {}
+
+# optimizer config
+optimizer:
+  type: adam
+  adam:
+    lr: 0.0002
+    beta1: 0.9
+    beta2: 0.999
+    eps: 0.00000001
+    weight_decay: 0.0005
+    amsgrad: false
+
+# training config
+lr_scheduler: null
+nEpochs: 1
+start_epoch: 0
+manualSeed: 1024
+save_ckpt: true
+save_feat: false
+
+# loss function
+loss_func:
+  cls_loss: cross_entropy
+  spe_loss: cross_entropy
+  con_loss: contrastive_regularization
+  rec_loss: l1loss
+losstype: null
+
+# metric
+metric_scoring: auc
+
+# cuda
+ngpu: 1
+cuda: false
+cudnn: false
+
+# SAM
+sam_param:
+  rho: 0.07
+  use_adaptive_sam: false
+
+mi_param:
+  mi_turn_on: false
+  mi_mode: 'fd'
+  mi_mode_measure: 'DV'
+  mi_lambda: 0.0
