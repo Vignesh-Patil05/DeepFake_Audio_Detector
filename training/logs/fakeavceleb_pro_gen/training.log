@@ -1,0 +1,602 @@
+2026-05-09 02:22:12,129 - INFO - Save log to training/logs/fakeavceleb_pro_gen
+2026-05-09 02:22:12,129 - INFO - --------------- Configuration ---------------
+2026-05-09 02:22:12,129 - INFO - Parameters: 
+log_dir: training/logs/fakeavceleb_pro_gen
+device: cuda
+ngpu: 1
+pretrained: False
+manualSeed: 1024
+lr_scheduler: {'type': 'cos', 'cos': {'T_max': 20, 'eta_min': 1e-06}}
+mi_param: {'mi_turn_on': True, 'mi_loss_weight': 0.1}
+sam_param: {'rho': 0.05, 'use_adaptive_sam': False}
+model_name: AudioFakeDetector
+backbone_name: rawnet2
+encoder_feat_dim: 1024
+backbone_config: {'num_classes': 2, 'device': 'cuda', 'nb_classes': 2, 'in_channels': 1, 'filts': [128, [128, 128], [128, 512], [512, 512]], 'first_conv': 1024, 'gru_node': 1024, 'nb_gru_layer': 3, 'nb_fc_node': 1024, 'nb_samp': 64000, 'mode': 'adjust_channel', 'dropout': 0.05}
+dataset_type: pair-audio
+train_dataset: ['train.list']
+test_dataset: ['test.list']
+train_file: C:/Users/vishu/AI-Synthesized-Voice-Generalization-main/train.list
+test_file: C:/Users/vishu/AI-Synthesized-Voice-Generalization-main/test.list
+dataset_root: C:/Users/vishu/AI-Synthesized-Voice-Generalization-main/datasets/FakeAVCeleb_audio
+train_batchSize: 4
+test_batchSize: 4
+workers: 0
+save_ckpt: True
+save_feat: True
+label_dict: {'real': 0, 'fake': 1}
+optimizer: {'type': 'adam', 'adam': {'lr': 0.0001, 'beta1': 0.9, 'beta2': 0.999, 'eps': 1e-08, 'weight_decay': 0.0005, 'amsgrad': False}}
+nEpochs: 20
+start_epoch: 0
+save_epoch: 1
+rec_iter: 100
+cuda: True
+cudnn: True
+loss_func: {'cls_loss': 'cross_entropy', 'spe_loss': 'cross_entropy', 'con_loss': 'contrastive_regularization', 'rec_loss': 'l1loss'}
+metric_scoring: auc
+
+2026-05-09 02:23:13,499 - INFO - Save log to training/logs/fakeavceleb_pro_gen
+2026-05-09 02:23:13,499 - INFO - --------------- Configuration ---------------
+2026-05-09 02:23:13,500 - INFO - Parameters: 
+log_dir: training/logs/fakeavceleb_pro_gen
+device: cuda
+ngpu: 1
+pretrained: False
+manualSeed: 1024
+lr_scheduler: None
+mi_param: {'mi_turn_on': True, 'mi_loss_weight': 0.1}
+sam_param: {'rho': 0.05, 'use_adaptive_sam': False}
+model_name: AudioFakeDetector
+backbone_name: rawnet2
+encoder_feat_dim: 1024
+backbone_config: {'num_classes': 2, 'device': 'cuda', 'nb_classes': 2, 'in_channels': 1, 'filts': [128, [128, 128], [128, 512], [512, 512]], 'first_conv': 1024, 'gru_node': 1024, 'nb_gru_layer': 3, 'nb_fc_node': 1024, 'nb_samp': 64000, 'mode': 'adjust_channel', 'dropout': 0.05}
+dataset_type: pair-audio
+train_dataset: ['train.list']
+test_dataset: ['test.list']
+train_file: C:/Users/vishu/AI-Synthesized-Voice-Generalization-main/train.list
+test_file: C:/Users/vishu/AI-Synthesized-Voice-Generalization-main/test.list
+dataset_root: C:/Users/vishu/AI-Synthesized-Voice-Generalization-main/datasets/FakeAVCeleb_audio
+train_batchSize: 4
+test_batchSize: 4
+workers: 0
+save_ckpt: True
+save_feat: True
+label_dict: {'real': 0, 'fake': 1}
+optimizer: {'type': 'adam', 'adam': {'lr': 0.0001, 'beta1': 0.9, 'beta2': 0.999, 'eps': 1e-08, 'weight_decay': 0.0005, 'amsgrad': False}}
+nEpochs: 20
+start_epoch: 0
+save_epoch: 1
+rec_iter: 100
+cuda: True
+cudnn: True
+loss_func: {'cls_loss': 'cross_entropy', 'spe_loss': 'cross_entropy', 'con_loss': 'contrastive_regularization', 'rec_loss': 'l1loss'}
+metric_scoring: auc
+
+2026-05-09 02:23:14,771 - INFO - ===> Epoch[0] start!
+2026-05-09 02:23:14,774 - INFO - data_dict saved to training/logs/fakeavceleb_pro_gen\AudioFakeDetector_2026-05-09-02-23-14\train\train.list\data_dict_train.pickle
+2026-05-09 02:24:37,110 - INFO - Save log to training/logs/fakeavceleb_pro_gen
+2026-05-09 02:24:37,110 - INFO - --------------- Configuration ---------------
+2026-05-09 02:24:37,111 - INFO - Parameters: 
+log_dir: training/logs/fakeavceleb_pro_gen
+device: cuda
+ngpu: 1
+pretrained: False
+manualSeed: 1024
+lr_scheduler: None
+mi_param: {'mi_turn_on': True, 'mi_loss_weight': 0.1, 'mi_mode_measure': 'JSD', 'mi_mode': 'global'}
+sam_param: {'rho': 0.05, 'use_adaptive_sam': False}
+model_name: AudioFakeDetector
+backbone_name: rawnet2
+encoder_feat_dim: 1024
+backbone_config: {'num_classes': 2, 'device': 'cuda', 'nb_classes': 2, 'in_channels': 1, 'filts': [128, [128, 128], [128, 512], [512, 512]], 'first_conv': 1024, 'gru_node': 1024, 'nb_gru_layer': 3, 'nb_fc_node': 1024, 'nb_samp': 64000, 'mode': 'adjust_channel', 'dropout': 0.05}
+dataset_type: pair-audio
+train_dataset: ['train.list']
+test_dataset: ['test.list']
+train_file: C:/Users/vishu/AI-Synthesized-Voice-Generalization-main/train.list
+test_file: C:/Users/vishu/AI-Synthesized-Voice-Generalization-main/test.list
+dataset_root: C:/Users/vishu/AI-Synthesized-Voice-Generalization-main/datasets/FakeAVCeleb_audio
+train_batchSize: 4
+test_batchSize: 4
+workers: 0
+save_ckpt: True
+save_feat: True
+label_dict: {'real': 0, 'fake': 1}
+optimizer: {'type': 'adam', 'adam': {'lr': 0.0001, 'beta1': 0.9, 'beta2': 0.999, 'eps': 1e-08, 'weight_decay': 0.0005, 'amsgrad': False}}
+nEpochs: 20
+start_epoch: 0
+save_epoch: 1
+rec_iter: 100
+cuda: True
+cudnn: True
+loss_func: {'cls_loss': 'cross_entropy', 'spe_loss': 'cross_entropy', 'con_loss': 'contrastive_regularization', 'rec_loss': 'l1loss'}
+metric_scoring: auc
+
+2026-05-09 02:24:38,175 - INFO - ===> Epoch[0] start!
+2026-05-09 02:24:38,184 - INFO - data_dict saved to training/logs/fakeavceleb_pro_gen\AudioFakeDetector_2026-05-09-02-24-38\train\train.list\data_dict_train.pickle
+2026-05-09 02:25:39,406 - INFO - Save log to training/logs/fakeavceleb_pro_gen
+2026-05-09 02:25:39,406 - INFO - --------------- Configuration ---------------
+2026-05-09 02:25:39,406 - INFO - Parameters: 
+log_dir: training/logs/fakeavceleb_pro_gen
+device: cuda
+ngpu: 1
+pretrained: False
+manualSeed: 1024
+lr_scheduler: None
+mi_param: {'mi_turn_on': True, 'mi_loss_weight': 0.1, 'mi_mode_measure': 'JSD', 'mi_mode': 'local'}
+sam_param: {'rho': 0.05, 'use_adaptive_sam': False}
+model_name: AudioFakeDetector
+backbone_name: rawnet2
+encoder_feat_dim: 1024
+backbone_config: {'num_classes': 2, 'device': 'cuda', 'nb_classes': 2, 'in_channels': 1, 'filts': [128, [128, 128], [128, 512], [512, 512]], 'first_conv': 1024, 'gru_node': 1024, 'nb_gru_layer': 3, 'nb_fc_node': 1024, 'nb_samp': 64000, 'mode': 'adjust_channel', 'dropout': 0.05}
+dataset_type: pair-audio
+train_dataset: ['train.list']
+test_dataset: ['test.list']
+train_file: C:/Users/vishu/AI-Synthesized-Voice-Generalization-main/train.list
+test_file: C:/Users/vishu/AI-Synthesized-Voice-Generalization-main/test.list
+dataset_root: C:/Users/vishu/AI-Synthesized-Voice-Generalization-main/datasets/FakeAVCeleb_audio
+train_batchSize: 4
+test_batchSize: 4
+workers: 0
+save_ckpt: True
+save_feat: True
+label_dict: {'real': 0, 'fake': 1}
+optimizer: {'type': 'adam', 'adam': {'lr': 0.0001, 'beta1': 0.9, 'beta2': 0.999, 'eps': 1e-08, 'weight_decay': 0.0005, 'amsgrad': False}}
+nEpochs: 20
+start_epoch: 0
+save_epoch: 1
+rec_iter: 100
+cuda: True
+cudnn: True
+loss_func: {'cls_loss': 'cross_entropy', 'spe_loss': 'cross_entropy', 'con_loss': 'contrastive_regularization', 'rec_loss': 'l1loss'}
+metric_scoring: auc
+
+2026-05-09 02:25:40,458 - INFO - ===> Epoch[0] start!
+2026-05-09 02:25:40,460 - INFO - data_dict saved to training/logs/fakeavceleb_pro_gen\AudioFakeDetector_2026-05-09-02-25-40\train\train.list\data_dict_train.pickle
+2026-05-09 02:27:17,633 - INFO - Save log to training/logs/fakeavceleb_pro_gen
+2026-05-09 02:27:17,633 - INFO - --------------- Configuration ---------------
+2026-05-09 02:27:17,633 - INFO - Parameters: 
+log_dir: training/logs/fakeavceleb_pro_gen
+device: cuda
+ngpu: 1
+pretrained: False
+manualSeed: 1024
+lr_scheduler: None
+mi_param: {'mi_turn_on': False, 'mi_loss_weight': 0.0, 'mi_mode_measure': 'JSD', 'mi_mode': 'local'}
+sam_param: {'rho': 0.05, 'use_adaptive_sam': False}
+model_name: AudioFakeDetector
+backbone_name: rawnet2
+encoder_feat_dim: 1024
+backbone_config: {'num_classes': 2, 'device': 'cuda', 'nb_classes': 2, 'in_channels': 1, 'filts': [128, [128, 128], [128, 512], [512, 512]], 'first_conv': 1024, 'gru_node': 1024, 'nb_gru_layer': 3, 'nb_fc_node': 1024, 'nb_samp': 64000, 'mode': 'adjust_channel', 'dropout': 0.05}
+dataset_type: pair-audio
+train_dataset: ['train.list']
+test_dataset: ['test.list']
+train_file: C:/Users/vishu/AI-Synthesized-Voice-Generalization-main/train.list
+test_file: C:/Users/vishu/AI-Synthesized-Voice-Generalization-main/test.list
+dataset_root: C:/Users/vishu/AI-Synthesized-Voice-Generalization-main/datasets/FakeAVCeleb_audio
+train_batchSize: 4
+test_batchSize: 4
+workers: 0
+save_ckpt: True
+save_feat: True
+label_dict: {'real': 0, 'fake': 1}
+optimizer: {'type': 'adam', 'adam': {'lr': 0.0001, 'beta1': 0.9, 'beta2': 0.999, 'eps': 1e-08, 'weight_decay': 0.0005, 'amsgrad': False}}
+nEpochs: 20
+start_epoch: 0
+save_epoch: 1
+rec_iter: 100
+cuda: True
+cudnn: True
+loss_func: {'cls_loss': 'cross_entropy', 'spe_loss': 'cross_entropy', 'con_loss': 'contrastive_regularization', 'rec_loss': 'l1loss'}
+metric_scoring: auc
+
+2026-05-09 02:27:18,703 - INFO - ===> Epoch[0] start!
+2026-05-09 02:27:18,704 - INFO - data_dict saved to training/logs/fakeavceleb_pro_gen\AudioFakeDetector_2026-05-09-02-27-18\train\train.list\data_dict_train.pickle
+2026-05-09 02:27:27,376 - INFO - Iter: 0    training-loss, overall: 2.658    training-loss, common: 0.696    training-loss, specific: 1.930    training-loss, reconstruction: 3.936    training-loss, contrastive: 11.766    
+2026-05-09 02:27:27,376 - INFO - Iter: 0    training-metric, acc: 0.500    training-metric, acc_spe: 0.125    training-metric, auc: 0.000    training-metric, eer: 1.000    training-metric, ap: 0.365    
+2026-05-09 02:46:24,379 - INFO - Iter: 300    training-loss, overall: 2.199    training-loss, common: 0.541    training-loss, specific: 0.881    training-loss, reconstruction: 3.981    training-loss, contrastive: 7.515    
+2026-05-09 02:46:24,379 - INFO - Iter: 300    training-metric, acc: 0.748    training-metric, acc_spe: 0.683    training-metric, auc: 0.807    training-metric, eer: 0.230    training-metric, ap: 0.838    
+2026-05-09 02:54:20,171 - INFO - Checkpoint saved to training/logs/fakeavceleb_pro_gen\AudioFakeDetector_2026-05-09-02-27-18\test\LibriSeVoc\ckpt_0.pth
+2026-05-09 02:54:20,172 - INFO - ===> Epoch[0] end with testing auc: {}!
+2026-05-09 02:54:20,172 - INFO - ===> Epoch[1] start!
+2026-05-09 02:54:20,174 - INFO - data_dict saved to training/logs/fakeavceleb_pro_gen\AudioFakeDetector_2026-05-09-02-27-18\train\train.list\data_dict_train.pickle
+2026-05-09 02:54:23,174 - INFO - Iter: 429    training-loss, overall: 1.591    training-loss, common: 0.222    training-loss, specific: 0.119    training-loss, reconstruction: 3.988    training-loss, contrastive: 3.207    
+2026-05-09 02:54:23,174 - INFO - Iter: 429    training-metric, acc: 0.875    training-metric, acc_spe: 0.875    training-metric, auc: 1.000    training-metric, eer: 0.000    training-metric, ap: 1.000    
+2026-05-09 03:12:50,599 - INFO - Iter: 729    training-loss, overall: 1.478    training-loss, common: 0.175    training-loss, specific: 0.320    training-loss, reconstruction: 3.980    training-loss, contrastive: 1.530    
+2026-05-09 03:12:50,599 - INFO - Iter: 729    training-metric, acc: 0.939    training-metric, acc_spe: 0.937    training-metric, auc: 0.986    training-metric, eer: 0.028    training-metric, ap: 0.988    
+2026-05-09 03:20:38,268 - INFO - Checkpoint saved to training/logs/fakeavceleb_pro_gen\AudioFakeDetector_2026-05-09-02-27-18\test\LibriSeVoc\ckpt_1.pth
+2026-05-09 03:20:38,269 - INFO - ===> Epoch[1] end with testing auc: {}!
+2026-05-09 03:20:38,269 - INFO - ===> Epoch[2] start!
+2026-05-09 03:20:38,270 - INFO - data_dict saved to training/logs/fakeavceleb_pro_gen\AudioFakeDetector_2026-05-09-02-27-18\train\train.list\data_dict_train.pickle
+2026-05-09 03:20:41,129 - INFO - Iter: 858    training-loss, overall: 1.206    training-loss, common: 0.012    training-loss, specific: 0.018    training-loss, reconstruction: 3.974    training-loss, contrastive: 0.000    
+2026-05-09 03:20:41,129 - INFO - Iter: 858    training-metric, acc: 1.000    training-metric, acc_spe: 1.000    training-metric, auc: 1.000    training-metric, eer: 0.000    training-metric, ap: 1.000    
+2026-05-09 03:39:18,719 - INFO - Iter: 1158    training-loss, overall: 1.306    training-loss, common: 0.076    training-loss, specific: 0.207    training-loss, reconstruction: 3.952    training-loss, contrastive: 0.462    
+2026-05-09 03:39:18,719 - INFO - Iter: 1158    training-metric, acc: 0.966    training-metric, acc_spe: 0.961    training-metric, auc: 0.995    training-metric, eer: 0.012    training-metric, ap: 0.996    
+2026-05-09 03:47:05,448 - INFO - Checkpoint saved to training/logs/fakeavceleb_pro_gen\AudioFakeDetector_2026-05-09-02-27-18\test\LibriSeVoc\ckpt_2.pth
+2026-05-09 03:47:05,449 - INFO - ===> Epoch[2] end with testing auc: {}!
+2026-05-09 03:47:05,449 - INFO - ===> Epoch[3] start!
+2026-05-09 03:47:05,451 - INFO - data_dict saved to training/logs/fakeavceleb_pro_gen\AudioFakeDetector_2026-05-09-02-27-18\train\train.list\data_dict_train.pickle
+2026-05-09 03:47:09,124 - INFO - Iter: 1287    training-loss, overall: 1.233    training-loss, common: 0.105    training-loss, specific: 0.320    training-loss, reconstruction: 3.528    training-loss, contrastive: 0.746    
+2026-05-09 03:47:09,125 - INFO - Iter: 1287    training-metric, acc: 0.875    training-metric, acc_spe: 1.000    training-metric, auc: 1.000    training-metric, eer: 0.000    training-metric, ap: 1.000    
+2026-05-09 04:05:23,121 - INFO - Iter: 1587    training-loss, overall: 0.296    training-loss, common: 0.082    training-loss, specific: 0.204    training-loss, reconstruction: 0.561    training-loss, contrastive: 0.493    
+2026-05-09 04:05:23,121 - INFO - Iter: 1587    training-metric, acc: 0.969    training-metric, acc_spe: 0.971    training-metric, auc: 0.996    training-metric, eer: 0.007    training-metric, ap: 0.996    
+2026-05-09 04:13:17,409 - INFO - Checkpoint saved to training/logs/fakeavceleb_pro_gen\AudioFakeDetector_2026-05-09-02-27-18\test\LibriSeVoc\ckpt_3.pth
+2026-05-09 04:13:17,409 - INFO - ===> Epoch[3] end with testing auc: {}!
+2026-05-09 04:13:17,410 - INFO - ===> Epoch[4] start!
+2026-05-09 04:13:17,411 - INFO - data_dict saved to training/logs/fakeavceleb_pro_gen\AudioFakeDetector_2026-05-09-02-27-18\train\train.list\data_dict_train.pickle
+2026-05-09 04:13:21,564 - INFO - Iter: 1716    training-loss, overall: 0.173    training-loss, common: 0.089    training-loss, specific: 0.515    training-loss, reconstruction: 0.105    training-loss, contrastive: 0.006    
+2026-05-09 04:13:21,564 - INFO - Iter: 1716    training-metric, acc: 1.000    training-metric, acc_spe: 1.000    training-metric, auc: 1.000    training-metric, eer: 0.000    training-metric, ap: 1.000    
+2026-05-09 04:31:43,944 - INFO - Iter: 2016    training-loss, overall: 0.112    training-loss, common: 0.056    training-loss, specific: 0.174    training-loss, reconstruction: 0.094    training-loss, contrastive: 0.198    
+2026-05-09 04:31:43,945 - INFO - Iter: 2016    training-metric, acc: 0.973    training-metric, acc_spe: 0.973    training-metric, auc: 0.998    training-metric, eer: 0.004    training-metric, ap: 0.998    
+2026-05-09 04:39:29,740 - INFO - Checkpoint saved to training/logs/fakeavceleb_pro_gen\AudioFakeDetector_2026-05-09-02-27-18\test\LibriSeVoc\ckpt_4.pth
+2026-05-09 04:39:29,741 - INFO - ===> Epoch[4] end with testing auc: {}!
+2026-05-09 04:39:29,741 - INFO - ===> Epoch[5] start!
+2026-05-09 04:39:29,743 - INFO - data_dict saved to training/logs/fakeavceleb_pro_gen\AudioFakeDetector_2026-05-09-02-27-18\train\train.list\data_dict_train.pickle
+2026-05-09 04:39:33,291 - INFO - Iter: 2145    training-loss, overall: 0.218    training-loss, common: 0.173    training-loss, specific: 0.139    training-loss, reconstruction: 0.102    training-loss, contrastive: 0.000    
+2026-05-09 04:39:33,291 - INFO - Iter: 2145    training-metric, acc: 0.875    training-metric, acc_spe: 1.000    training-metric, auc: 0.969    training-metric, eer: 0.000    training-metric, ap: 0.950    
+2026-05-09 04:57:42,664 - INFO - Iter: 2445    training-loss, overall: 0.096    training-loss, common: 0.045    training-loss, specific: 0.156    training-loss, reconstruction: 0.096    training-loss, contrastive: 0.142    
+2026-05-09 04:57:42,664 - INFO - Iter: 2445    training-metric, acc: 0.975    training-metric, acc_spe: 0.972    training-metric, auc: 0.998    training-metric, eer: 0.004    training-metric, ap: 0.998    
+2026-05-09 05:05:30,038 - INFO - Checkpoint saved to training/logs/fakeavceleb_pro_gen\AudioFakeDetector_2026-05-09-02-27-18\test\LibriSeVoc\ckpt_5.pth
+2026-05-09 05:05:30,038 - INFO - ===> Epoch[5] end with testing auc: {}!
+2026-05-09 05:05:30,039 - INFO - ===> Epoch[6] start!
+2026-05-09 05:05:30,040 - INFO - data_dict saved to training/logs/fakeavceleb_pro_gen\AudioFakeDetector_2026-05-09-02-27-18\train\train.list\data_dict_train.pickle
+2026-05-09 05:05:34,270 - INFO - Iter: 2574    training-loss, overall: 0.143    training-loss, common: 0.087    training-loss, specific: 0.261    training-loss, reconstruction: 0.100    training-loss, contrastive: 0.000    
+2026-05-09 05:05:34,270 - INFO - Iter: 2574    training-metric, acc: 0.875    training-metric, acc_spe: 1.000    training-metric, auc: 1.000    training-metric, eer: 0.000    training-metric, ap: 1.000    
+2026-05-09 05:23:51,199 - INFO - Iter: 2874    training-loss, overall: 0.085    training-loss, common: 0.038    training-loss, specific: 0.135    training-loss, reconstruction: 0.099    training-loss, contrastive: 0.075    
+2026-05-09 05:23:51,199 - INFO - Iter: 2874    training-metric, acc: 0.976    training-metric, acc_spe: 0.978    training-metric, auc: 0.999    training-metric, eer: 0.003    training-metric, ap: 0.998    
+2026-05-09 05:31:38,387 - INFO - Checkpoint saved to training/logs/fakeavceleb_pro_gen\AudioFakeDetector_2026-05-09-02-27-18\test\LibriSeVoc\ckpt_6.pth
+2026-05-09 05:31:38,388 - INFO - ===> Epoch[6] end with testing auc: {}!
+2026-05-09 05:31:38,388 - INFO - ===> Epoch[7] start!
+2026-05-09 05:31:38,390 - INFO - data_dict saved to training/logs/fakeavceleb_pro_gen\AudioFakeDetector_2026-05-09-02-27-18\train\train.list\data_dict_train.pickle
+2026-05-09 05:31:41,664 - INFO - Iter: 3003    training-loss, overall: 0.075    training-loss, common: 0.024    training-loss, specific: 0.214    training-loss, reconstruction: 0.099    training-loss, contrastive: 0.000    
+2026-05-09 05:31:41,664 - INFO - Iter: 3003    training-metric, acc: 1.000    training-metric, acc_spe: 1.000    training-metric, auc: 1.000    training-metric, eer: 0.000    training-metric, ap: 1.000    
+2026-05-09 05:49:55,046 - INFO - Iter: 3303    training-loss, overall: 0.094    training-loss, common: 0.045    training-loss, specific: 0.164    training-loss, reconstruction: 0.092    training-loss, contrastive: 0.099    
+2026-05-09 05:49:55,046 - INFO - Iter: 3303    training-metric, acc: 0.977    training-metric, acc_spe: 0.978    training-metric, auc: 0.998    training-metric, eer: 0.002    training-metric, ap: 0.998    
+2026-05-09 05:57:34,967 - INFO - Checkpoint saved to training/logs/fakeavceleb_pro_gen\AudioFakeDetector_2026-05-09-02-27-18\test\LibriSeVoc\ckpt_7.pth
+2026-05-09 05:57:34,968 - INFO - ===> Epoch[7] end with testing auc: {}!
+2026-05-09 05:57:34,968 - INFO - ===> Epoch[8] start!
+2026-05-09 05:57:34,970 - INFO - data_dict saved to training/logs/fakeavceleb_pro_gen\AudioFakeDetector_2026-05-09-02-27-18\train\train.list\data_dict_train.pickle
+2026-05-09 05:57:38,265 - INFO - Iter: 3432    training-loss, overall: 0.055    training-loss, common: 0.019    training-loss, specific: 0.183    training-loss, reconstruction: 0.057    training-loss, contrastive: 0.000    
+2026-05-09 05:57:38,265 - INFO - Iter: 3432    training-metric, acc: 1.000    training-metric, acc_spe: 0.875    training-metric, auc: 1.000    training-metric, eer: 0.000    training-metric, ap: 1.000    
+2026-05-09 06:15:47,486 - INFO - Iter: 3732    training-loss, overall: 0.099    training-loss, common: 0.047    training-loss, specific: 0.160    training-loss, reconstruction: 0.093    training-loss, contrastive: 0.168    
+2026-05-09 06:15:47,486 - INFO - Iter: 3732    training-metric, acc: 0.976    training-metric, acc_spe: 0.975    training-metric, auc: 0.999    training-metric, eer: 0.003    training-metric, ap: 0.998    
+2026-05-09 06:23:35,038 - INFO - Checkpoint saved to training/logs/fakeavceleb_pro_gen\AudioFakeDetector_2026-05-09-02-27-18\test\LibriSeVoc\ckpt_8.pth
+2026-05-09 06:23:35,039 - INFO - ===> Epoch[8] end with testing auc: {}!
+2026-05-09 06:23:35,040 - INFO - ===> Epoch[9] start!
+2026-05-09 06:23:35,041 - INFO - data_dict saved to training/logs/fakeavceleb_pro_gen\AudioFakeDetector_2026-05-09-02-27-18\train\train.list\data_dict_train.pickle
+2026-05-09 06:23:38,636 - INFO - Iter: 3861    training-loss, overall: 0.078    training-loss, common: 0.000    training-loss, specific: 0.399    training-loss, reconstruction: 0.126    training-loss, contrastive: 0.000    
+2026-05-09 06:23:38,636 - INFO - Iter: 3861    training-metric, acc: 1.000    training-metric, acc_spe: 0.875    training-metric, auc: 1.000    training-metric, eer: 0.000    training-metric, ap: 1.000    
+2026-05-09 06:41:49,161 - INFO - Iter: 4161    training-loss, overall: 0.068    training-loss, common: 0.025    training-loss, specific: 0.143    training-loss, reconstruction: 0.093    training-loss, contrastive: 0.011    
+2026-05-09 06:41:49,161 - INFO - Iter: 4161    training-metric, acc: 0.983    training-metric, acc_spe: 0.980    training-metric, auc: 0.999    training-metric, eer: 0.000    training-metric, ap: 0.999    
+2026-05-09 06:49:35,099 - INFO - Checkpoint saved to training/logs/fakeavceleb_pro_gen\AudioFakeDetector_2026-05-09-02-27-18\test\LibriSeVoc\ckpt_9.pth
+2026-05-09 06:49:35,100 - INFO - ===> Epoch[9] end with testing auc: {}!
+2026-05-09 06:49:35,100 - INFO - ===> Epoch[10] start!
+2026-05-09 06:49:35,101 - INFO - data_dict saved to training/logs/fakeavceleb_pro_gen\AudioFakeDetector_2026-05-09-02-27-18\train\train.list\data_dict_train.pickle
+2026-05-09 06:49:38,279 - INFO - Iter: 4290    training-loss, overall: 0.028    training-loss, common: 0.008    training-loss, specific: 0.006    training-loss, reconstruction: 0.063    training-loss, contrastive: 0.000    
+2026-05-09 06:49:38,279 - INFO - Iter: 4290    training-metric, acc: 1.000    training-metric, acc_spe: 1.000    training-metric, auc: 1.000    training-metric, eer: 0.000    training-metric, ap: 1.000    
+2026-05-09 07:07:55,551 - INFO - Iter: 4590    training-loss, overall: 0.091    training-loss, common: 0.043    training-loss, specific: 0.164    training-loss, reconstruction: 0.093    training-loss, contrastive: 0.074    
+2026-05-09 07:07:55,551 - INFO - Iter: 4590    training-metric, acc: 0.974    training-metric, acc_spe: 0.973    training-metric, auc: 0.998    training-metric, eer: 0.002    training-metric, ap: 0.998    
+2026-05-09 07:15:49,449 - INFO - Checkpoint saved to training/logs/fakeavceleb_pro_gen\AudioFakeDetector_2026-05-09-02-27-18\test\LibriSeVoc\ckpt_10.pth
+2026-05-09 07:15:49,449 - INFO - ===> Epoch[10] end with testing auc: {}!
+2026-05-09 07:15:49,449 - INFO - ===> Epoch[11] start!
+2026-05-09 07:15:49,450 - INFO - data_dict saved to training/logs/fakeavceleb_pro_gen\AudioFakeDetector_2026-05-09-02-27-18\train\train.list\data_dict_train.pickle
+2026-05-09 07:15:52,062 - INFO - Iter: 4719    training-loss, overall: 0.138    training-loss, common: 0.087    training-loss, specific: 0.224    training-loss, reconstruction: 0.096    training-loss, contrastive: 0.000    
+2026-05-09 07:15:52,062 - INFO - Iter: 4719    training-metric, acc: 1.000    training-metric, acc_spe: 1.000    training-metric, auc: 1.000    training-metric, eer: 0.000    training-metric, ap: 1.000    
+2026-05-09 07:34:02,008 - INFO - Iter: 5019    training-loss, overall: 0.104    training-loss, common: 0.052    training-loss, specific: 0.149    training-loss, reconstruction: 0.094    training-loss, contrastive: 0.178    
+2026-05-09 07:34:02,008 - INFO - Iter: 5019    training-metric, acc: 0.975    training-metric, acc_spe: 0.977    training-metric, auc: 0.997    training-metric, eer: 0.004    training-metric, ap: 0.996    
+2026-05-09 07:41:51,490 - INFO - Checkpoint saved to training/logs/fakeavceleb_pro_gen\AudioFakeDetector_2026-05-09-02-27-18\test\LibriSeVoc\ckpt_11.pth
+2026-05-09 07:41:51,491 - INFO - ===> Epoch[11] end with testing auc: {}!
+2026-05-09 07:41:51,491 - INFO - ===> Epoch[12] start!
+2026-05-09 07:41:51,492 - INFO - data_dict saved to training/logs/fakeavceleb_pro_gen\AudioFakeDetector_2026-05-09-02-27-18\train\train.list\data_dict_train.pickle
+2026-05-09 07:41:54,588 - INFO - Iter: 5148    training-loss, overall: 0.149    training-loss, common: 0.087    training-loss, specific: 0.266    training-loss, reconstruction: 0.118    training-loss, contrastive: 0.000    
+2026-05-09 07:41:54,588 - INFO - Iter: 5148    training-metric, acc: 0.875    training-metric, acc_spe: 1.000    training-metric, auc: 1.000    training-metric, eer: 0.000    training-metric, ap: 1.000    
+2026-05-09 08:00:09,775 - INFO - Iter: 5448    training-loss, overall: 0.084    training-loss, common: 0.036    training-loss, specific: 0.153    training-loss, reconstruction: 0.095    training-loss, contrastive: 0.097    
+2026-05-09 08:00:09,775 - INFO - Iter: 5448    training-metric, acc: 0.978    training-metric, acc_spe: 0.973    training-metric, auc: 0.999    training-metric, eer: 0.003    training-metric, ap: 0.998    
+2026-05-09 08:08:04,365 - INFO - Checkpoint saved to training/logs/fakeavceleb_pro_gen\AudioFakeDetector_2026-05-09-02-27-18\test\LibriSeVoc\ckpt_12.pth
+2026-05-09 08:08:04,366 - INFO - ===> Epoch[12] end with testing auc: {}!
+2026-05-09 08:08:04,366 - INFO - ===> Epoch[13] start!
+2026-05-09 08:08:04,367 - INFO - data_dict saved to training/logs/fakeavceleb_pro_gen\AudioFakeDetector_2026-05-09-02-27-18\train\train.list\data_dict_train.pickle
+2026-05-09 08:08:08,514 - INFO - Iter: 5577    training-loss, overall: 0.107    training-loss, common: 0.087    training-loss, specific: 0.003    training-loss, reconstruction: 0.065    training-loss, contrastive: 0.000    
+2026-05-09 08:08:08,514 - INFO - Iter: 5577    training-metric, acc: 1.000    training-metric, acc_spe: 1.000    training-metric, auc: 1.000    training-metric, eer: 0.000    training-metric, ap: 1.000    
+2026-05-09 08:26:22,554 - INFO - Iter: 5877    training-loss, overall: 0.086    training-loss, common: 0.039    training-loss, specific: 0.147    training-loss, reconstruction: 0.095    training-loss, contrastive: 0.078    
+2026-05-09 08:26:22,555 - INFO - Iter: 5877    training-metric, acc: 0.973    training-metric, acc_spe: 0.984    training-metric, auc: 0.998    training-metric, eer: 0.002    training-metric, ap: 0.997    
+2026-05-09 08:34:11,462 - INFO - Checkpoint saved to training/logs/fakeavceleb_pro_gen\AudioFakeDetector_2026-05-09-02-27-18\test\LibriSeVoc\ckpt_13.pth
+2026-05-09 08:34:11,462 - INFO - ===> Epoch[13] end with testing auc: {}!
+2026-05-09 08:34:11,462 - INFO - ===> Epoch[14] start!
+2026-05-09 08:34:11,464 - INFO - data_dict saved to training/logs/fakeavceleb_pro_gen\AudioFakeDetector_2026-05-09-02-27-18\train\train.list\data_dict_train.pickle
+2026-05-09 08:34:13,720 - INFO - Iter: 6006    training-loss, overall: 0.057    training-loss, common: 0.000    training-loss, specific: 0.174    training-loss, reconstruction: 0.133    training-loss, contrastive: 0.000    
+2026-05-09 08:34:13,720 - INFO - Iter: 6006    training-metric, acc: 1.000    training-metric, acc_spe: 1.000    training-metric, auc: 1.000    training-metric, eer: 0.000    training-metric, ap: 1.000    
+2026-05-09 08:52:16,125 - INFO - Iter: 6306    training-loss, overall: 0.087    training-loss, common: 0.040    training-loss, specific: 0.146    training-loss, reconstruction: 0.092    training-loss, contrastive: 0.104    
+2026-05-09 08:52:16,125 - INFO - Iter: 6306    training-metric, acc: 0.977    training-metric, acc_spe: 0.975    training-metric, auc: 0.998    training-metric, eer: 0.003    training-metric, ap: 0.997    
+2026-05-09 09:00:04,632 - INFO - Checkpoint saved to training/logs/fakeavceleb_pro_gen\AudioFakeDetector_2026-05-09-02-27-18\test\LibriSeVoc\ckpt_14.pth
+2026-05-09 09:00:04,633 - INFO - ===> Epoch[14] end with testing auc: {}!
+2026-05-09 09:00:04,633 - INFO - ===> Epoch[15] start!
+2026-05-09 09:00:04,635 - INFO - data_dict saved to training/logs/fakeavceleb_pro_gen\AudioFakeDetector_2026-05-09-02-27-18\train\train.list\data_dict_train.pickle
+2026-05-09 09:00:08,905 - INFO - Iter: 6435    training-loss, overall: 0.075    training-loss, common: 0.000    training-loss, specific: 0.400    training-loss, reconstruction: 0.115    training-loss, contrastive: 0.000    
+2026-05-09 09:00:08,906 - INFO - Iter: 6435    training-metric, acc: 1.000    training-metric, acc_spe: 1.000    training-metric, auc: 1.000    training-metric, eer: 0.000    training-metric, ap: 1.000    
+2026-05-09 09:18:24,491 - INFO - Iter: 6735    training-loss, overall: 0.151    training-loss, common: 0.083    training-loss, specific: 0.194    training-loss, reconstruction: 0.091    training-loss, contrastive: 0.436    
+2026-05-09 09:18:24,492 - INFO - Iter: 6735    training-metric, acc: 0.970    training-metric, acc_spe: 0.968    training-metric, auc: 0.995    training-metric, eer: 0.007    training-metric, ap: 0.996    
+2026-05-09 09:26:06,487 - INFO - Checkpoint saved to training/logs/fakeavceleb_pro_gen\AudioFakeDetector_2026-05-09-02-27-18\test\LibriSeVoc\ckpt_15.pth
+2026-05-09 09:26:06,487 - INFO - ===> Epoch[15] end with testing auc: {}!
+2026-05-09 09:26:06,488 - INFO - ===> Epoch[16] start!
+2026-05-09 09:26:06,489 - INFO - data_dict saved to training/logs/fakeavceleb_pro_gen\AudioFakeDetector_2026-05-09-02-27-18\train\train.list\data_dict_train.pickle
+2026-05-09 09:26:10,819 - INFO - Iter: 6864    training-loss, overall: 0.110    training-loss, common: 0.087    training-loss, specific: 0.000    training-loss, reconstruction: 0.079    training-loss, contrastive: 0.000    
+2026-05-09 09:26:10,819 - INFO - Iter: 6864    training-metric, acc: 0.875    training-metric, acc_spe: 1.000    training-metric, auc: 1.000    training-metric, eer: 0.000    training-metric, ap: 1.000    
+2026-05-09 09:44:10,076 - INFO - Iter: 7164    training-loss, overall: 0.068    training-loss, common: 0.027    training-loss, specific: 0.132    training-loss, reconstruction: 0.093    training-loss, contrastive: 0.009    
+2026-05-09 09:44:10,076 - INFO - Iter: 7164    training-metric, acc: 0.984    training-metric, acc_spe: 0.982    training-metric, auc: 0.999    training-metric, eer: 0.000    training-metric, ap: 0.999    
+2026-05-09 09:51:55,342 - INFO - Checkpoint saved to training/logs/fakeavceleb_pro_gen\AudioFakeDetector_2026-05-09-02-27-18\test\LibriSeVoc\ckpt_16.pth
+2026-05-09 09:51:55,342 - INFO - ===> Epoch[16] end with testing auc: {}!
+2026-05-09 09:51:55,342 - INFO - ===> Epoch[17] start!
+2026-05-09 09:51:55,344 - INFO - data_dict saved to training/logs/fakeavceleb_pro_gen\AudioFakeDetector_2026-05-09-02-27-18\train\train.list\data_dict_train.pickle
+2026-05-09 09:51:58,665 - INFO - Iter: 7293    training-loss, overall: 0.056    training-loss, common: 0.000    training-loss, specific: 0.235    training-loss, reconstruction: 0.108    training-loss, contrastive: 0.000    
+2026-05-09 09:51:58,665 - INFO - Iter: 7293    training-metric, acc: 1.000    training-metric, acc_spe: 0.875    training-metric, auc: 1.000    training-metric, eer: 0.000    training-metric, ap: 1.000    
+2026-05-09 10:15:34,919 - INFO - Iter: 7593    training-loss, overall: 0.081    training-loss, common: 0.034    training-loss, specific: 0.156    training-loss, reconstruction: 0.094    training-loss, contrastive: 0.063    
+2026-05-09 10:15:34,920 - INFO - Iter: 7593    training-metric, acc: 0.978    training-metric, acc_spe: 0.977    training-metric, auc: 0.999    training-metric, eer: 0.002    training-metric, ap: 0.999    
+2026-05-09 10:23:31,039 - INFO - Checkpoint saved to training/logs/fakeavceleb_pro_gen\AudioFakeDetector_2026-05-09-02-27-18\test\LibriSeVoc\ckpt_17.pth
+2026-05-09 10:23:31,040 - INFO - ===> Epoch[17] end with testing auc: {}!
+2026-05-09 10:23:31,040 - INFO - ===> Epoch[18] start!
+2026-05-09 10:23:31,042 - INFO - data_dict saved to training/logs/fakeavceleb_pro_gen\AudioFakeDetector_2026-05-09-02-27-18\train\train.list\data_dict_train.pickle
+2026-05-09 10:23:34,589 - INFO - Iter: 7722    training-loss, overall: 0.043    training-loss, common: 0.000    training-loss, specific: 0.139    training-loss, reconstruction: 0.096    training-loss, contrastive: 0.000    
+2026-05-09 10:23:34,590 - INFO - Iter: 7722    training-metric, acc: 1.000    training-metric, acc_spe: 1.000    training-metric, auc: 1.000    training-metric, eer: 0.000    training-metric, ap: 1.000    
+2026-05-09 10:42:13,979 - INFO - Iter: 8022    training-loss, overall: 0.079    training-loss, common: 0.033    training-loss, specific: 0.145    training-loss, reconstruction: 0.092    training-loss, contrastive: 0.081    
+2026-05-09 10:42:13,980 - INFO - Iter: 8022    training-metric, acc: 0.980    training-metric, acc_spe: 0.979    training-metric, auc: 0.999    training-metric, eer: 0.002    training-metric, ap: 0.998    
+2026-05-09 10:50:18,606 - INFO - Checkpoint saved to training/logs/fakeavceleb_pro_gen\AudioFakeDetector_2026-05-09-02-27-18\test\LibriSeVoc\ckpt_18.pth
+2026-05-09 10:50:18,607 - INFO - ===> Epoch[18] end with testing auc: {}!
+2026-05-09 10:50:18,607 - INFO - ===> Epoch[19] start!
+2026-05-09 10:50:18,609 - INFO - data_dict saved to training/logs/fakeavceleb_pro_gen\AudioFakeDetector_2026-05-09-02-27-18\train\train.list\data_dict_train.pickle
+2026-05-09 10:50:22,885 - INFO - Iter: 8151    training-loss, overall: 0.124    training-loss, common: 0.102    training-loss, specific: 0.020    training-loss, reconstruction: 0.067    training-loss, contrastive: 0.000    
+2026-05-09 10:50:22,886 - INFO - Iter: 8151    training-metric, acc: 1.000    training-metric, acc_spe: 1.000    training-metric, auc: 1.000    training-metric, eer: 0.000    training-metric, ap: 1.000    
+2026-05-09 11:09:47,591 - INFO - Iter: 8451    training-loss, overall: 0.090    training-loss, common: 0.043    training-loss, specific: 0.154    training-loss, reconstruction: 0.093    training-loss, contrastive: 0.096    
+2026-05-09 11:09:47,592 - INFO - Iter: 8451    training-metric, acc: 0.974    training-metric, acc_spe: 0.980    training-metric, auc: 0.998    training-metric, eer: 0.001    training-metric, ap: 0.998    
+2026-05-09 11:17:57,506 - INFO - Checkpoint saved to training/logs/fakeavceleb_pro_gen\AudioFakeDetector_2026-05-09-02-27-18\test\LibriSeVoc\ckpt_19.pth
+2026-05-09 11:17:57,506 - INFO - ===> Epoch[19] end with testing auc: {}!
+2026-05-09 11:17:57,506 - INFO - ===> Epoch[20] start!
+2026-05-09 11:17:57,508 - INFO - data_dict saved to training/logs/fakeavceleb_pro_gen\AudioFakeDetector_2026-05-09-02-27-18\train\train.list\data_dict_train.pickle
+2026-05-09 11:18:01,151 - INFO - Iter: 8580    training-loss, overall: 0.036    training-loss, common: 0.000    training-loss, specific: 0.090    training-loss, reconstruction: 0.090    training-loss, contrastive: 0.000    
+2026-05-09 11:18:01,151 - INFO - Iter: 8580    training-metric, acc: 1.000    training-metric, acc_spe: 1.000    training-metric, auc: 1.000    training-metric, eer: 0.000    training-metric, ap: 1.000    
+2026-05-09 11:36:31,557 - INFO - Iter: 8880    training-loss, overall: 0.074    training-loss, common: 0.031    training-loss, specific: 0.152    training-loss, reconstruction: 0.094    training-loss, contrastive: 0.000    
+2026-05-09 11:36:31,557 - INFO - Iter: 8880    training-metric, acc: 0.978    training-metric, acc_spe: 0.975    training-metric, auc: 0.999    training-metric, eer: 0.002    training-metric, ap: 0.998    
+2026-05-09 11:44:20,306 - INFO - Checkpoint saved to training/logs/fakeavceleb_pro_gen\AudioFakeDetector_2026-05-09-02-27-18\test\LibriSeVoc\ckpt_20.pth
+2026-05-09 11:44:20,306 - INFO - ===> Epoch[20] end with testing auc: {}!
+2026-05-09 11:44:20,307 - INFO - Stop Training on best Testing metric {}
+2026-05-09 13:06:30,777 - INFO - Save log to training/logs/fakeavceleb_pro_gen
+2026-05-09 13:06:30,777 - INFO - --------------- Configuration ---------------
+2026-05-09 13:06:30,778 - INFO - Parameters: 
+log_dir: training/logs/fakeavceleb_pro_gen
+device: cuda
+ngpu: 1
+pretrained: C:/Users/vishu/AI-Synthesized-Voice-Generalization-main/training/logs/fakeavceleb_pro_gen/AudioFakeDetector_2026-05-09-02-27-18/test/LibriSeVoc/ckpt_19.pth
+manualSeed: 1024
+lr_scheduler: None
+mi_param: {'mi_turn_on': True, 'mi_loss_weight': 0.1, 'mi_mode_measure': 'JSD', 'mi_mode': 'local'}
+sam_param: {'rho': 0.05, 'use_adaptive_sam': False}
+model_name: AudioFakeDetector
+backbone_name: rawnet2
+encoder_feat_dim: 1024
+backbone_config: {'num_classes': 2, 'device': 'cuda', 'nb_classes': 2, 'in_channels': 1, 'filts': [128, [128, 128], [128, 512], [512, 512]], 'first_conv': 1024, 'gru_node': 1024, 'nb_gru_layer': 3, 'nb_fc_node': 1024, 'nb_samp': 64000, 'mode': 'adjust_channel', 'dropout': 0.05}
+dataset_type: pair-audio
+train_dataset: ['train.list']
+test_dataset: ['test.list']
+train_file: C:/Users/vishu/AI-Synthesized-Voice-Generalization-main/train.list
+test_file: C:/Users/vishu/AI-Synthesized-Voice-Generalization-main/test.list
+dataset_root: C:/Users/vishu/AI-Synthesized-Voice-Generalization-main/datasets/FakeAVCeleb_audio
+train_batchSize: 4
+test_batchSize: 4
+workers: 0
+save_ckpt: True
+save_feat: True
+label_dict: {'real': 0, 'fake': 1}
+optimizer: {'type': 'adam', 'adam': {'lr': 1e-05, 'beta1': 0.9, 'beta2': 0.999, 'eps': 1e-08, 'weight_decay': 0.0005, 'amsgrad': False}}
+nEpochs: 7
+start_epoch: 0
+save_epoch: 1
+rec_iter: 100
+cuda: True
+cudnn: True
+loss_func: {'cls_loss': 'cross_entropy', 'spe_loss': 'cross_entropy', 'con_loss': 'contrastive_regularization', 'rec_loss': 'l1loss'}
+metric_scoring: auc
+
+2026-05-09 13:08:37,792 - INFO - Save log to training/logs/fakeavceleb_pro_gen
+2026-05-09 13:08:37,792 - INFO - --------------- Configuration ---------------
+2026-05-09 13:08:37,792 - INFO - Parameters: 
+log_dir: training/logs/fakeavceleb_pro_gen
+device: cuda
+ngpu: 1
+pretrained: C:/Users/vishu/AI-Synthesized-Voice-Generalization-main/training/logs/fakeavceleb_pro_gen/AudioFakeDetector_2026-05-09-02-27-18/test/LibriSeVoc/ckpt_19.pth
+manualSeed: 1024
+lr_scheduler: None
+mi_param: {'mi_turn_on': True, 'mi_loss_weight': 0.1, 'mi_mode_measure': 'JSD', 'mi_mode': 'local'}
+sam_param: {'rho': 0.05, 'use_adaptive_sam': False}
+model_name: AudioFakeDetector
+backbone_name: rawnet2
+encoder_feat_dim: 1024
+backbone_config: {'num_classes': 2, 'device': 'cuda', 'nb_classes': 2, 'in_channels': 1, 'filts': [128, [128, 128], [128, 512], [512, 512]], 'first_conv': 1024, 'gru_node': 1024, 'nb_gru_layer': 3, 'nb_fc_node': 1024, 'nb_samp': 64000, 'mode': 'adjust_channel', 'dropout': 0.05}
+dataset_type: pair-audio
+train_dataset: ['train.list']
+test_dataset: ['test.list']
+train_file: C:/Users/vishu/AI-Synthesized-Voice-Generalization-main/train.list
+test_file: C:/Users/vishu/AI-Synthesized-Voice-Generalization-main/test.list
+dataset_root: C:/Users/vishu/AI-Synthesized-Voice-Generalization-main/datasets/FakeAVCeleb_audio
+train_batchSize: 4
+test_batchSize: 4
+workers: 0
+save_ckpt: True
+save_feat: True
+label_dict: {'real': 0, 'fake': 1}
+optimizer: {'type': 'adam', 'adam': {'lr': 1e-05, 'beta1': 0.9, 'beta2': 0.999, 'eps': 1e-08, 'weight_decay': 0.0005, 'amsgrad': False}}
+nEpochs: 7
+start_epoch: 0
+save_epoch: 1
+rec_iter: 100
+cuda: True
+cudnn: True
+loss_func: {'cls_loss': 'cross_entropy', 'spe_loss': 'cross_entropy', 'con_loss': 'contrastive_regularization', 'rec_loss': 'l1loss'}
+metric_scoring: auc
+
+2026-05-09 13:08:38,907 - INFO - Load pretrained model successfully!
+2026-05-09 13:08:39,225 - INFO - Load pretrained model successfully!
+2026-05-09 13:08:39,462 - INFO - ===> Epoch[0] start!
+2026-05-09 13:08:39,464 - INFO - data_dict saved to training/logs/fakeavceleb_pro_gen\AudioFakeDetector_2026-05-09-13-08-39\train\train.list\data_dict_train.pickle
+2026-05-09 13:10:41,616 - INFO - Save log to training/logs/fakeavceleb_pro_gen
+2026-05-09 13:10:41,616 - INFO - --------------- Configuration ---------------
+2026-05-09 13:10:41,617 - INFO - Parameters: 
+log_dir: training/logs/fakeavceleb_pro_gen
+device: cuda
+ngpu: 1
+pretrained: C:/Users/vishu/AI-Synthesized-Voice-Generalization-main/training/logs/fakeavceleb_pro_gen/AudioFakeDetector_2026-05-09-02-27-18/test/LibriSeVoc/ckpt_19.pth
+manualSeed: 1024
+lr_scheduler: None
+mi_param: {'mi_turn_on': True, 'mi_loss_weight': 0.1, 'mi_mode_measure': 'JSD', 'mi_mode': 'local'}
+sam_param: {'rho': 0.05, 'use_adaptive_sam': False}
+model_name: AudioFakeDetector
+backbone_name: rawnet2
+encoder_feat_dim: 1024
+backbone_config: {'num_classes': 2, 'device': 'cuda', 'nb_classes': 2, 'in_channels': 1, 'filts': [128, [128, 128], [128, 512], [512, 512]], 'first_conv': 1024, 'gru_node': 1024, 'nb_gru_layer': 3, 'nb_fc_node': 1024, 'nb_samp': 64000, 'mode': 'adjust_channel', 'dropout': 0.05}
+dataset_type: pair-audio
+train_dataset: ['train.list']
+test_dataset: ['test.list']
+train_file: C:/Users/vishu/AI-Synthesized-Voice-Generalization-main/train.list
+test_file: C:/Users/vishu/AI-Synthesized-Voice-Generalization-main/test.list
+dataset_root: C:/Users/vishu/AI-Synthesized-Voice-Generalization-main/datasets/FakeAVCeleb_audio
+train_batchSize: 4
+test_batchSize: 4
+workers: 0
+save_ckpt: True
+save_feat: True
+label_dict: {'real': 0, 'fake': 1}
+optimizer: {'type': 'adam', 'adam': {'lr': 1e-05, 'beta1': 0.9, 'beta2': 0.999, 'eps': 1e-08, 'weight_decay': 0.0005, 'amsgrad': False}}
+nEpochs: 7
+start_epoch: 0
+save_epoch: 1
+rec_iter: 100
+cuda: True
+cudnn: True
+loss_func: {'cls_loss': 'cross_entropy', 'spe_loss': 'cross_entropy', 'con_loss': 'contrastive_regularization', 'rec_loss': 'l1loss'}
+metric_scoring: auc
+
+2026-05-09 13:10:42,513 - INFO - Load pretrained model successfully!
+2026-05-09 13:10:42,849 - INFO - Load pretrained model successfully!
+2026-05-09 13:10:43,069 - INFO - ===> Epoch[0] start!
+2026-05-09 13:10:43,071 - INFO - data_dict saved to training/logs/fakeavceleb_pro_gen\AudioFakeDetector_2026-05-09-13-10-43\train\train.list\data_dict_train.pickle
+2026-05-09 13:10:52,015 - INFO - Iter: 0    training-loss, overall: 2.797    training-loss, common: 0.696    training-loss, specific: 1.930    training-loss, reconstruction: 3.937    training-loss, contrastive: 11.765    training-loss, mi: 1.390    
+2026-05-09 13:10:52,015 - INFO - Iter: 0    training-metric, acc: 0.500    training-metric, acc_spe: 0.125    training-metric, auc: 0.000    training-metric, eer: 1.000    training-metric, ap: 0.365    
+2026-05-09 13:23:32,791 - INFO - Iter: 300    training-loss, overall: 2.477    training-loss, common: 0.581    training-loss, specific: 1.384    training-loss, reconstruction: 3.973    training-loss, contrastive: 8.740    training-loss, mi: 1.284    
+2026-05-09 13:23:32,791 - INFO - Iter: 300    training-metric, acc: 0.705    training-metric, acc_spe: 0.632    training-metric, auc: 0.766    training-metric, eer: 0.266    training-metric, ap: 0.806    
+2026-05-09 13:29:00,925 - INFO - ===> Test start!
+2026-05-09 13:29:00,927 - INFO - data_dict saved to training/logs/fakeavceleb_pro_gen\AudioFakeDetector_2026-05-09-13-10-43\test\LibriSeVoc\data_dict_test.pickle
+2026-05-09 13:29:34,735 - INFO - Checkpoint saved to training/logs/fakeavceleb_pro_gen\AudioFakeDetector_2026-05-09-13-10-43\test\LibriSeVoc\ckpt_best.pth
+2026-05-09 13:29:34,736 - INFO - Metrics saved to training/logs/fakeavceleb_pro_gen\AudioFakeDetector_2026-05-09-13-10-43\test\LibriSeVoc\metric_dict_best.pickle
+2026-05-09 13:29:34,737 - INFO - dataset: LibriSeVoc    step: 429    testing-loss, common: 0.2208    
+2026-05-09 13:29:34,737 - INFO - dataset: LibriSeVoc    step: 429    testing-metric, acc: 0.9284    testing-metric, auc: 0.9834    testing-metric, eer: 0.0549    testing-metric, ap: 0.9801    
+2026-05-09 13:29:34,750 - INFO - ===> Test Done!
+2026-05-09 13:29:34,751 - INFO - ===> Epoch[0] end with testing auc: 0.9834!
+2026-05-09 13:29:35,295 - INFO - Checkpoint saved to training/logs/fakeavceleb_pro_gen\AudioFakeDetector_2026-05-09-13-10-43\test\LibriSeVoc\ckpt_0.pth
+2026-05-09 13:29:35,296 - INFO - ===> Epoch[0] end with testing auc: {'acc': 0.9284009546539379, 'auc': 0.9834473487847529, 'eer': np.float64(0.05489260143198091), 'ap': 0.9800512713667034}!
+2026-05-09 13:29:35,296 - INFO - ===> Epoch[1] start!
+2026-05-09 13:29:35,298 - INFO - data_dict saved to training/logs/fakeavceleb_pro_gen\AudioFakeDetector_2026-05-09-13-10-43\train\train.list\data_dict_train.pickle
+2026-05-09 13:29:36,745 - INFO - Iter: 429    training-loss, overall: 1.509    training-loss, common: 0.140    training-loss, specific: 0.265    training-loss, reconstruction: 3.987    training-loss, contrastive: 0.364    training-loss, mi: 1.287    
+2026-05-09 13:29:36,746 - INFO - Iter: 429    training-metric, acc: 1.000    training-metric, acc_spe: 1.000    training-metric, auc: 1.000    training-metric, eer: 0.000    training-metric, ap: 1.000    
+2026-05-09 13:39:09,056 - INFO - Iter: 729    training-loss, overall: 1.860    training-loss, common: 0.296    training-loss, specific: 0.554    training-loss, reconstruction: 3.987    training-loss, contrastive: 3.813    training-loss, mi: 1.223    
+2026-05-09 13:39:09,056 - INFO - Iter: 729    training-metric, acc: 0.878    training-metric, acc_spe: 0.815    training-metric, auc: 0.941    training-metric, eer: 0.087    training-metric, ap: 0.949    
+2026-05-09 13:42:59,507 - INFO - ===> Test start!
+2026-05-09 13:42:59,508 - INFO - data_dict saved to training/logs/fakeavceleb_pro_gen\AudioFakeDetector_2026-05-09-13-10-43\test\LibriSeVoc\data_dict_test.pickle
+2026-05-09 13:43:47,398 - INFO - Checkpoint saved to training/logs/fakeavceleb_pro_gen\AudioFakeDetector_2026-05-09-13-10-43\test\LibriSeVoc\ckpt_best.pth
+2026-05-09 13:43:47,398 - INFO - Metrics saved to training/logs/fakeavceleb_pro_gen\AudioFakeDetector_2026-05-09-13-10-43\test\LibriSeVoc\metric_dict_best.pickle
+2026-05-09 13:43:47,399 - INFO - dataset: LibriSeVoc    step: 858    testing-loss, common: 0.1089    
+2026-05-09 13:43:47,399 - INFO - dataset: LibriSeVoc    step: 858    testing-metric, acc: 0.9541    testing-metric, auc: 0.9985    testing-metric, eer: 0.0119    testing-metric, ap: 0.9985    
+2026-05-09 13:43:47,400 - INFO - ===> Test Done!
+2026-05-09 13:43:47,401 - INFO - ===> Epoch[1] end with testing auc: 0.9985!
+2026-05-09 13:43:47,854 - INFO - Checkpoint saved to training/logs/fakeavceleb_pro_gen\AudioFakeDetector_2026-05-09-13-10-43\test\LibriSeVoc\ckpt_1.pth
+2026-05-09 13:43:47,855 - INFO - ===> Epoch[1] end with testing auc: {'acc': 0.9540572792362768, 'auc': 0.9984962491669562, 'eer': np.float64(0.011933174224343675), 'ap': 0.9985352465725216}!
+2026-05-09 13:43:47,855 - INFO - ===> Epoch[2] start!
+2026-05-09 13:43:47,857 - INFO - data_dict saved to training/logs/fakeavceleb_pro_gen\AudioFakeDetector_2026-05-09-13-10-43\train\train.list\data_dict_train.pickle
+2026-05-09 13:43:49,699 - INFO - Iter: 858    training-loss, overall: 1.446    training-loss, common: 0.100    training-loss, specific: 0.181    training-loss, reconstruction: 3.986    training-loss, contrastive: 0.562    training-loss, mi: 1.039    
+2026-05-09 13:43:49,699 - INFO - Iter: 858    training-metric, acc: 1.000    training-metric, acc_spe: 1.000    training-metric, auc: 1.000    training-metric, eer: 0.000    training-metric, ap: 1.000    
+2026-05-09 13:52:45,413 - INFO - Iter: 1158    training-loss, overall: 1.564    training-loss, common: 0.148    training-loss, specific: 0.305    training-loss, reconstruction: 3.990    training-loss, contrastive: 1.448    training-loss, mi: 1.169    
+2026-05-09 13:52:45,413 - INFO - Iter: 1158    training-metric, acc: 0.944    training-metric, acc_spe: 0.933    training-metric, auc: 0.984    training-metric, eer: 0.034    training-metric, ap: 0.986    
+2026-05-09 13:56:35,456 - INFO - ===> Test start!
+2026-05-09 13:56:35,458 - INFO - data_dict saved to training/logs/fakeavceleb_pro_gen\AudioFakeDetector_2026-05-09-13-10-43\test\LibriSeVoc\data_dict_test.pickle
+2026-05-09 13:57:22,060 - INFO - dataset: LibriSeVoc    step: 1287    testing-loss, common: 0.0491    
+2026-05-09 13:57:22,060 - INFO - dataset: LibriSeVoc    step: 1287    testing-metric, acc: 0.9646    testing-metric, auc: 0.9983    testing-metric, eer: 0.0024    testing-metric, ap: 0.9987    
+2026-05-09 13:57:22,061 - INFO - ===> Test Done!
+2026-05-09 13:57:22,062 - INFO - ===> Epoch[2] end with testing auc: 0.9983!
+2026-05-09 13:57:22,463 - INFO - Checkpoint saved to training/logs/fakeavceleb_pro_gen\AudioFakeDetector_2026-05-09-13-10-43\test\LibriSeVoc\ckpt_2.pth
+2026-05-09 13:57:22,464 - INFO - ===> Epoch[2] end with testing auc: {'acc': 0.9645982498011137, 'auc': 0.9982570160798812, 'eer': np.float64(0.002386634844868735), 'ap': 0.998723233806766}!
+2026-05-09 13:57:22,464 - INFO - ===> Epoch[3] start!
+2026-05-09 13:57:22,466 - INFO - data_dict saved to training/logs/fakeavceleb_pro_gen\AudioFakeDetector_2026-05-09-13-10-43\train\train.list\data_dict_train.pickle
+2026-05-09 13:57:24,078 - INFO - Iter: 1287    training-loss, overall: 1.368    training-loss, common: 0.092    training-loss, specific: 0.182    training-loss, reconstruction: 3.992    training-loss, contrastive: 0.000    training-loss, mi: 0.599    
+2026-05-09 13:57:24,079 - INFO - Iter: 1287    training-metric, acc: 0.875    training-metric, acc_spe: 1.000    training-metric, auc: 1.000    training-metric, eer: 0.000    training-metric, ap: 1.000    
+2026-05-09 14:06:28,873 - INFO - Iter: 1587    training-loss, overall: 1.470    training-loss, common: 0.100    training-loss, specific: 0.239    training-loss, reconstruction: 3.991    training-loss, contrastive: 0.738    training-loss, mi: 1.112    
+2026-05-09 14:06:28,873 - INFO - Iter: 1587    training-metric, acc: 0.956    training-metric, acc_spe: 0.956    training-metric, auc: 0.993    training-metric, eer: 0.016    training-metric, ap: 0.994    
+2026-05-09 14:10:36,295 - INFO - ===> Test start!
+2026-05-09 14:10:36,298 - INFO - data_dict saved to training/logs/fakeavceleb_pro_gen\AudioFakeDetector_2026-05-09-13-10-43\test\LibriSeVoc\data_dict_test.pickle
+2026-05-09 14:11:26,793 - INFO - Checkpoint saved to training/logs/fakeavceleb_pro_gen\AudioFakeDetector_2026-05-09-13-10-43\test\LibriSeVoc\ckpt_best.pth
+2026-05-09 14:11:26,794 - INFO - Metrics saved to training/logs/fakeavceleb_pro_gen\AudioFakeDetector_2026-05-09-13-10-43\test\LibriSeVoc\metric_dict_best.pickle
+2026-05-09 14:11:26,794 - INFO - dataset: LibriSeVoc    step: 1716    testing-loss, common: 0.0259    
+2026-05-09 14:11:26,795 - INFO - dataset: LibriSeVoc    step: 1716    testing-metric, acc: 0.9729    testing-metric, auc: 0.9986    testing-metric, eer: 0.0048    testing-metric, ap: 0.9989    
+2026-05-09 14:11:26,795 - INFO - ===> Test Done!
+2026-05-09 14:11:26,797 - INFO - ===> Epoch[3] end with testing auc: 0.9986!
+2026-05-09 14:11:27,294 - INFO - Checkpoint saved to training/logs/fakeavceleb_pro_gen\AudioFakeDetector_2026-05-09-13-10-43\test\LibriSeVoc\ckpt_3.pth
+2026-05-09 14:11:27,296 - INFO - ===> Epoch[3] end with testing auc: {'acc': 0.9728520286396182, 'auc': 0.9985987776328455, 'eer': np.float64(0.00477326968973747), 'ap': 0.9989167672106316}!
+2026-05-09 14:11:27,296 - INFO - ===> Epoch[4] start!
+2026-05-09 14:11:27,300 - INFO - data_dict saved to training/logs/fakeavceleb_pro_gen\AudioFakeDetector_2026-05-09-13-10-43\train\train.list\data_dict_train.pickle
+2026-05-09 14:11:28,955 - INFO - Iter: 1716    training-loss, overall: 1.375    training-loss, common: 0.020    training-loss, specific: 0.524    training-loss, reconstruction: 3.991    training-loss, contrastive: 0.510    training-loss, mi: 0.794    
+2026-05-09 14:11:28,956 - INFO - Iter: 1716    training-metric, acc: 1.000    training-metric, acc_spe: 0.875    training-metric, auc: 1.000    training-metric, eer: 0.000    training-metric, ap: 1.000    
+2026-05-09 14:20:52,838 - INFO - Iter: 2016    training-loss, overall: 1.400    training-loss, common: 0.060    training-loss, specific: 0.190    training-loss, reconstruction: 3.992    training-loss, contrastive: 0.348    training-loss, mi: 1.060    
+2026-05-09 14:20:52,839 - INFO - Iter: 2016    training-metric, acc: 0.969    training-metric, acc_spe: 0.967    training-metric, auc: 0.997    training-metric, eer: 0.006    training-metric, ap: 0.997    
+2026-05-09 14:24:46,641 - INFO - ===> Test start!
+2026-05-09 14:24:46,642 - INFO - data_dict saved to training/logs/fakeavceleb_pro_gen\AudioFakeDetector_2026-05-09-13-10-43\test\LibriSeVoc\data_dict_test.pickle
+2026-05-09 14:25:50,190 - INFO - Checkpoint saved to training/logs/fakeavceleb_pro_gen\AudioFakeDetector_2026-05-09-13-10-43\test\LibriSeVoc\ckpt_best.pth
+2026-05-09 14:25:50,191 - INFO - Metrics saved to training/logs/fakeavceleb_pro_gen\AudioFakeDetector_2026-05-09-13-10-43\test\LibriSeVoc\metric_dict_best.pickle
+2026-05-09 14:25:50,191 - INFO - dataset: LibriSeVoc    step: 2145    testing-loss, common: 0.0224    
+2026-05-09 14:25:50,192 - INFO - dataset: LibriSeVoc    step: 2145    testing-metric, acc: 0.9778    testing-metric, auc: 0.9989    testing-metric, eer: 0.0048    testing-metric, ap: 0.9991    
+2026-05-09 14:25:50,192 - INFO - ===> Test Done!
+2026-05-09 14:25:50,193 - INFO - ===> Epoch[4] end with testing auc: 0.9989!
+2026-05-09 14:25:50,515 - INFO - Checkpoint saved to training/logs/fakeavceleb_pro_gen\AudioFakeDetector_2026-05-09-13-10-43\test\LibriSeVoc\ckpt_4.pth
+2026-05-09 14:25:50,516 - INFO - ===> Epoch[4] end with testing auc: {'acc': 0.9778042959427208, 'auc': 0.9988721868752172, 'eer': np.float64(0.00477326968973747), 'ap': 0.9990877341712666}!
+2026-05-09 14:25:50,517 - INFO - ===> Epoch[5] start!
+2026-05-09 14:25:50,518 - INFO - data_dict saved to training/logs/fakeavceleb_pro_gen\AudioFakeDetector_2026-05-09-13-10-43\train\train.list\data_dict_train.pickle
+2026-05-09 14:25:52,082 - INFO - Iter: 2145    training-loss, overall: 1.480    training-loss, common: 0.173    training-loss, specific: 0.142    training-loss, reconstruction: 3.993    training-loss, contrastive: 0.000    training-loss, mi: 0.945    
+2026-05-09 14:25:52,082 - INFO - Iter: 2145    training-metric, acc: 0.875    training-metric, acc_spe: 1.000    training-metric, auc: 0.969    training-metric, eer: 0.000    training-metric, ap: 0.950    
+2026-05-09 14:34:48,671 - INFO - Iter: 2445    training-loss, overall: 1.355    training-loss, common: 0.034    training-loss, specific: 0.150    training-loss, reconstruction: 3.993    training-loss, contrastive: 0.065    training-loss, mi: 1.046    
+2026-05-09 14:34:48,671 - INFO - Iter: 2445    training-metric, acc: 0.979    training-metric, acc_spe: 0.975    training-metric, auc: 0.999    training-metric, eer: 0.001    training-metric, ap: 0.999    
+2026-05-09 14:38:33,346 - INFO - ===> Test start!
+2026-05-09 14:38:33,348 - INFO - data_dict saved to training/logs/fakeavceleb_pro_gen\AudioFakeDetector_2026-05-09-13-10-43\test\LibriSeVoc\data_dict_test.pickle
+2026-05-09 14:39:18,074 - INFO - Checkpoint saved to training/logs/fakeavceleb_pro_gen\AudioFakeDetector_2026-05-09-13-10-43\test\LibriSeVoc\ckpt_best.pth
+2026-05-09 14:39:18,075 - INFO - Metrics saved to training/logs/fakeavceleb_pro_gen\AudioFakeDetector_2026-05-09-13-10-43\test\LibriSeVoc\metric_dict_best.pickle
+2026-05-09 14:39:18,075 - INFO - dataset: LibriSeVoc    step: 2574    testing-loss, common: 0.0107    
+2026-05-09 14:39:18,075 - INFO - dataset: LibriSeVoc    step: 2574    testing-metric, acc: 0.9811    testing-metric, auc: 1.0000    testing-metric, eer: 0.0048    testing-metric, ap: 1.0000    
+2026-05-09 14:39:18,076 - INFO - ===> Test Done!
+2026-05-09 14:39:18,077 - INFO - ===> Epoch[5] end with testing auc: 1.0000!
+2026-05-09 14:39:18,404 - INFO - Checkpoint saved to training/logs/fakeavceleb_pro_gen\AudioFakeDetector_2026-05-09-13-10-43\test\LibriSeVoc\ckpt_5.pth
+2026-05-09 14:39:18,405 - INFO - ===> Epoch[5] end with testing auc: {'acc': 0.9811058074781225, 'auc': 0.9999544317929381, 'eer': np.float64(0.00477326968973747), 'ap': 0.9999548626979695}!
+2026-05-09 14:39:18,405 - INFO - ===> Epoch[6] start!
+2026-05-09 14:39:18,407 - INFO - data_dict saved to training/logs/fakeavceleb_pro_gen\AudioFakeDetector_2026-05-09-13-10-43\train\train.list\data_dict_train.pickle
+2026-05-09 14:39:19,939 - INFO - Iter: 2574    training-loss, overall: 1.409    training-loss, common: 0.087    training-loss, specific: 0.266    training-loss, reconstruction: 3.993    training-loss, contrastive: 0.000    training-loss, mi: 0.976    
+2026-05-09 14:39:19,940 - INFO - Iter: 2574    training-metric, acc: 0.875    training-metric, acc_spe: 1.000    training-metric, auc: 1.000    training-metric, eer: 0.000    training-metric, ap: 1.000    
+2026-05-09 14:48:38,141 - INFO - Iter: 2874    training-loss, overall: 1.353    training-loss, common: 0.036    training-loss, specific: 0.134    training-loss, reconstruction: 3.992    training-loss, contrastive: 0.069    training-loss, mi: 1.022    
+2026-05-09 14:48:38,141 - INFO - Iter: 2874    training-metric, acc: 0.976    training-metric, acc_spe: 0.978    training-metric, auc: 0.999    training-metric, eer: 0.003    training-metric, ap: 0.998    
+2026-05-09 14:52:31,004 - INFO - ===> Test start!
+2026-05-09 14:52:31,005 - INFO - data_dict saved to training/logs/fakeavceleb_pro_gen\AudioFakeDetector_2026-05-09-13-10-43\test\LibriSeVoc\data_dict_test.pickle
+2026-05-09 14:53:23,822 - INFO - dataset: LibriSeVoc    step: 3003    testing-loss, common: 0.0228    
+2026-05-09 14:53:23,822 - INFO - dataset: LibriSeVoc    step: 3003    testing-metric, acc: 0.9831    testing-metric, auc: 0.9985    testing-metric, eer: 0.0000    testing-metric, ap: 0.9988    
+2026-05-09 14:53:23,823 - INFO - ===> Test Done!
+2026-05-09 14:53:23,823 - INFO - ===> Epoch[6] end with testing auc: 0.9985!
+2026-05-09 14:53:24,189 - INFO - Checkpoint saved to training/logs/fakeavceleb_pro_gen\AudioFakeDetector_2026-05-09-13-10-43\test\LibriSeVoc\ckpt_6.pth
+2026-05-09 14:53:24,189 - INFO - ===> Epoch[6] end with testing auc: {'acc': 0.9831230821684283, 'auc': 0.9984506809598943, 'eer': np.float64(0.0), 'ap': 0.9988303339138662}!
+2026-05-09 14:53:24,189 - INFO - ===> Epoch[7] start!
+2026-05-09 14:53:24,191 - INFO - data_dict saved to training/logs/fakeavceleb_pro_gen\AudioFakeDetector_2026-05-09-13-10-43\train\train.list\data_dict_train.pickle
+2026-05-09 14:53:26,984 - INFO - Iter: 3003    training-loss, overall: 1.316    training-loss, common: 0.004    training-loss, specific: 0.180    training-loss, reconstruction: 3.990    training-loss, contrastive: 0.000    training-loss, mi: 0.976    
+2026-05-09 14:53:26,985 - INFO - Iter: 3003    training-metric, acc: 1.000    training-metric, acc_spe: 1.000    training-metric, auc: 1.000    training-metric, eer: 0.000    training-metric, ap: 1.000    
+2026-05-09 15:02:46,124 - INFO - Iter: 3303    training-loss, overall: 1.356    training-loss, common: 0.037    training-loss, specific: 0.168    training-loss, reconstruction: 3.991    training-loss, contrastive: 0.144    training-loss, mi: 0.978    
+2026-05-09 15:02:46,124 - INFO - Iter: 3303    training-metric, acc: 0.978    training-metric, acc_spe: 0.979    training-metric, auc: 0.999    training-metric, eer: 0.001    training-metric, ap: 0.999    
+2026-05-09 15:06:42,470 - INFO - ===> Test start!
+2026-05-09 15:06:42,473 - INFO - data_dict saved to training/logs/fakeavceleb_pro_gen\AudioFakeDetector_2026-05-09-13-10-43\test\LibriSeVoc\data_dict_test.pickle
+2026-05-09 15:07:32,589 - INFO - Checkpoint saved to training/logs/fakeavceleb_pro_gen\AudioFakeDetector_2026-05-09-13-10-43\test\LibriSeVoc\ckpt_best.pth
+2026-05-09 15:07:32,592 - INFO - Metrics saved to training/logs/fakeavceleb_pro_gen\AudioFakeDetector_2026-05-09-13-10-43\test\LibriSeVoc\metric_dict_best.pickle
+2026-05-09 15:07:32,592 - INFO - dataset: LibriSeVoc    step: 3432    testing-loss, common: 0.0024    
+2026-05-09 15:07:32,592 - INFO - dataset: LibriSeVoc    step: 3432    testing-metric, acc: 0.9852    testing-metric, auc: 1.0000    testing-metric, eer: 0.0000    testing-metric, ap: 1.0000    
+2026-05-09 15:07:32,593 - INFO - ===> Test Done!
+2026-05-09 15:07:32,594 - INFO - ===> Epoch[7] end with testing auc: 1.0000!
+2026-05-09 15:07:33,000 - INFO - Checkpoint saved to training/logs/fakeavceleb_pro_gen\AudioFakeDetector_2026-05-09-13-10-43\test\LibriSeVoc\ckpt_7.pth
+2026-05-09 15:07:33,001 - INFO - ===> Epoch[7] end with testing auc: {'acc': 0.9852326968973747, 'auc': 1.0, 'eer': np.float64(0.0), 'ap': 1.0}!
+2026-05-09 15:07:33,001 - INFO - Stop Training on best Testing metric {'acc': 0.9852326968973747, 'auc': 1.0, 'eer': np.float64(0.0), 'ap': 1.0}

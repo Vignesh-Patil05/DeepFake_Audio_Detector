@@ -1,0 +1,588 @@
+2026-05-09 01:36:07,614 - INFO - Save log to training/logs/fakeavceleb_main
+2026-05-09 01:36:07,614 - INFO - --------------- Configuration ---------------
+2026-05-09 01:36:07,614 - INFO - Parameters: 
+log_dir: training/logs/fakeavceleb_main
+model_name: AudioFakeDetector
+backbone_name: rawnet2
+encoder_feat_dim: 512
+backbone_config: {'mode': 'adjust_channel', 'num_classes': 2, 'inc': 3, 'dropout': False}
+dataset_type: pair-audio
+train_dataset: ['train.list']
+test_dataset: ['test.list']
+train_file: C:/Users/vishu/AI-Synthesized-Voice-Generalization-main/train.list
+dataset_root: C:/Users/vishu/AI-Synthesized-Voice-Generalization-main/datasets/FakeAVCeleb_audio
+train_batchSize: 8
+test_batchSize: 8
+workers: 2
+save_ckpt: True
+save_feat: True
+label_dict: {'real': 0, 'fake': 1}
+optimizer: {'type': 'adam', 'adam': {'lr': 0.0002, 'beta1': 0.9, 'beta2': 0.999, 'eps': 1e-08, 'weight_decay': 0.0005, 'amsgrad': False}}
+nEpochs: 20
+start_epoch: 0
+save_epoch: 1
+rec_iter: 100
+manualSeed: 1024
+cuda: True
+cudnn: True
+loss_func: {'cls_loss': 'cross_entropy', 'spe_loss': 'cross_entropy', 'con_loss': 'contrastive_regularization', 'rec_loss': 'l1loss'}
+metric_scoring: auc
+
+2026-05-09 01:40:16,651 - INFO - Save log to training/logs/fakeavceleb_main
+2026-05-09 01:40:16,652 - INFO - --------------- Configuration ---------------
+2026-05-09 01:40:16,652 - INFO - Parameters: 
+log_dir: training/logs/fakeavceleb_main
+model_name: AudioFakeDetector
+backbone_name: rawnet2
+encoder_feat_dim: 512
+backbone_config: {'mode': 'adjust_channel', 'num_classes': 2, 'inc': 3, 'dropout': False}
+dataset_type: pair-audio
+train_dataset: ['train.list']
+test_dataset: ['test.list']
+train_file: C:/Users/vishu/AI-Synthesized-Voice-Generalization-main/train.list
+dataset_root: C:/Users/vishu/AI-Synthesized-Voice-Generalization-main/datasets/FakeAVCeleb_audio
+train_batchSize: 8
+test_batchSize: 8
+workers: 2
+save_ckpt: True
+save_feat: True
+label_dict: {'real': 0, 'fake': 1}
+optimizer: {'type': 'adam', 'adam': {'lr': 0.0002, 'beta1': 0.9, 'beta2': 0.999, 'eps': 1e-08, 'weight_decay': 0.0005, 'amsgrad': False}}
+nEpochs: 20
+start_epoch: 0
+save_epoch: 1
+rec_iter: 100
+manualSeed: 1024
+cuda: True
+cudnn: True
+loss_func: {'cls_loss': 'cross_entropy', 'spe_loss': 'cross_entropy', 'con_loss': 'contrastive_regularization', 'rec_loss': 'l1loss'}
+metric_scoring: auc
+
+2026-05-09 01:41:22,188 - INFO - Save log to training/logs/fakeavceleb_main
+2026-05-09 01:41:22,188 - INFO - --------------- Configuration ---------------
+2026-05-09 01:41:22,189 - INFO - Parameters: 
+log_dir: training/logs/fakeavceleb_main
+model_name: AudioFakeDetector
+backbone_name: rawnet2
+encoder_feat_dim: 512
+backbone_config: {'mode': 'adjust_channel', 'num_classes': 2, 'inc': 3, 'dropout': False}
+dataset_type: pair-audio
+train_dataset: ['train.list']
+test_dataset: ['test.list']
+train_file: C:/Users/vishu/AI-Synthesized-Voice-Generalization-main/train.list
+test_file: C:/Users/vishu/AI-Synthesized-Voice-Generalization-main/test.list
+dataset_root: C:/Users/vishu/AI-Synthesized-Voice-Generalization-main/datasets/FakeAVCeleb_audio
+train_batchSize: 8
+test_batchSize: 8
+workers: 2
+save_ckpt: True
+save_feat: True
+label_dict: {'real': 0, 'fake': 1}
+optimizer: {'type': 'adam', 'adam': {'lr': 0.0002, 'beta1': 0.9, 'beta2': 0.999, 'eps': 1e-08, 'weight_decay': 0.0005, 'amsgrad': False}}
+nEpochs: 20
+start_epoch: 0
+save_epoch: 1
+rec_iter: 100
+manualSeed: 1024
+cuda: True
+cudnn: True
+loss_func: {'cls_loss': 'cross_entropy', 'spe_loss': 'cross_entropy', 'con_loss': 'contrastive_regularization', 'rec_loss': 'l1loss'}
+metric_scoring: auc
+
+2026-05-09 01:51:17,971 - INFO - Save log to training/logs/fakeavceleb_main
+2026-05-09 01:51:17,971 - INFO - --------------- Configuration ---------------
+2026-05-09 01:51:17,971 - INFO - Parameters: 
+log_dir: training/logs/fakeavceleb_main
+device: cuda
+model_name: AudioFakeDetector
+backbone_name: rawnet2
+encoder_feat_dim: 512
+backbone_config: {'mode': 'adjust_channel', 'num_classes': 2, 'inc': 3, 'dropout': False, 'device': 'cuda'}
+dataset_type: pair-audio
+train_dataset: ['train.list']
+test_dataset: ['test.list']
+train_file: C:/Users/vishu/AI-Synthesized-Voice-Generalization-main/train.list
+test_file: C:/Users/vishu/AI-Synthesized-Voice-Generalization-main/test.list
+dataset_root: C:/Users/vishu/AI-Synthesized-Voice-Generalization-main/datasets/FakeAVCeleb_audio
+train_batchSize: 8
+test_batchSize: 8
+workers: 2
+save_ckpt: True
+save_feat: True
+label_dict: {'real': 0, 'fake': 1}
+optimizer: {'type': 'adam', 'adam': {'lr': 0.0002, 'beta1': 0.9, 'beta2': 0.999, 'eps': 1e-08, 'weight_decay': 0.0005, 'amsgrad': False}}
+nEpochs: 20
+start_epoch: 0
+save_epoch: 1
+rec_iter: 100
+manualSeed: 1024
+cuda: True
+cudnn: True
+loss_func: {'cls_loss': 'cross_entropy', 'spe_loss': 'cross_entropy', 'con_loss': 'contrastive_regularization', 'rec_loss': 'l1loss'}
+metric_scoring: auc
+
+2026-05-09 01:53:16,980 - INFO - Save log to training/logs/fakeavceleb_main
+2026-05-09 01:53:16,980 - INFO - --------------- Configuration ---------------
+2026-05-09 01:53:16,981 - INFO - Parameters: 
+log_dir: training/logs/fakeavceleb_main
+device: cuda
+model_name: AudioFakeDetector
+backbone_name: rawnet2
+encoder_feat_dim: 512
+backbone_config: {'mode': 'adjust_channel', 'num_classes': 2, 'inc': 1, 'dropout': 0.05, 'device': 'cuda', 'nb_samp': 64000, 'first_conv': 128, 'in_channels': 1, 'filts': [128, [128, 128], [128, 512], [512, 512]], 'blocks': [2, 4], 'nb_fc_node': 1024, 'gru_node': 1024, 'nb_gru_layer': 3}
+dataset_type: pair-audio
+train_dataset: ['train.list']
+test_dataset: ['test.list']
+train_file: C:/Users/vishu/AI-Synthesized-Voice-Generalization-main/train.list
+test_file: C:/Users/vishu/AI-Synthesized-Voice-Generalization-main/test.list
+dataset_root: C:/Users/vishu/AI-Synthesized-Voice-Generalization-main/datasets/FakeAVCeleb_audio
+train_batchSize: 8
+test_batchSize: 8
+workers: 2
+save_ckpt: True
+save_feat: True
+label_dict: {'real': 0, 'fake': 1}
+optimizer: {'type': 'adam', 'adam': {'lr': 0.0001, 'beta1': 0.9, 'beta2': 0.999, 'eps': 1e-08, 'weight_decay': 0.0005, 'amsgrad': False}}
+nEpochs: 20
+start_epoch: 0
+save_epoch: 1
+rec_iter: 100
+manualSeed: 1024
+cuda: True
+cudnn: True
+loss_func: {'cls_loss': 'cross_entropy', 'spe_loss': 'cross_entropy', 'con_loss': 'contrastive_regularization', 'rec_loss': 'l1loss'}
+metric_scoring: auc
+
+2026-05-09 01:58:14,251 - INFO - Save log to training/logs/fakeavceleb_main
+2026-05-09 01:58:14,251 - INFO - --------------- Configuration ---------------
+2026-05-09 01:58:14,251 - INFO - Parameters: 
+log_dir: training/logs/fakeavceleb_main
+device: cuda
+model_name: AudioFakeDetector
+backbone_name: rawnet2
+encoder_feat_dim: 512
+backbone_config: {'device': 'cuda', 'in_channels': 1, 'filts': [128, [128, 128], [128, 512], [512, 512]], 'first_conv': 1024, 'gru_node': 1024, 'nb_gru_layer': 3, 'nb_fc_node': 1024, 'nb_classes': 2, 'mode': 'adjust_channel', 'dropout': 0.05}
+dataset_type: pair-audio
+train_dataset: ['train.list']
+test_dataset: ['test.list']
+train_file: C:/Users/vishu/AI-Synthesized-Voice-Generalization-main/train.list
+test_file: C:/Users/vishu/AI-Synthesized-Voice-Generalization-main/test.list
+dataset_root: C:/Users/vishu/AI-Synthesized-Voice-Generalization-main/datasets/FakeAVCeleb_audio
+train_batchSize: 8
+test_batchSize: 8
+workers: 2
+save_ckpt: True
+save_feat: True
+label_dict: {'real': 0, 'fake': 1}
+optimizer: {'type': 'adam', 'adam': {'lr': 0.0001, 'beta1': 0.9, 'beta2': 0.999, 'eps': 1e-08, 'weight_decay': 0.0005, 'amsgrad': False}}
+nEpochs: 20
+start_epoch: 0
+save_epoch: 1
+rec_iter: 100
+manualSeed: 1024
+cuda: True
+cudnn: True
+loss_func: {'cls_loss': 'cross_entropy', 'spe_loss': 'cross_entropy', 'con_loss': 'contrastive_regularization', 'rec_loss': 'l1loss'}
+metric_scoring: auc
+
+2026-05-09 01:59:28,376 - INFO - Save log to training/logs/fakeavceleb_main
+2026-05-09 01:59:28,377 - INFO - --------------- Configuration ---------------
+2026-05-09 01:59:28,377 - INFO - Parameters: 
+log_dir: training/logs/fakeavceleb_main
+device: cuda
+model_name: AudioFakeDetector
+backbone_name: rawnet2
+encoder_feat_dim: 512
+backbone_config: {'num_classes': 2, 'device': 'cuda', 'nb_classes': 2, 'in_channels': 1, 'filts': [128, [128, 128], [128, 512], [512, 512]], 'first_conv': 1024, 'gru_node': 1024, 'nb_gru_layer': 3, 'nb_fc_node': 1024, 'nb_samp': 64000, 'mode': 'adjust_channel', 'dropout': 0.05}
+dataset_type: pair-audio
+train_dataset: ['train.list']
+test_dataset: ['test.list']
+train_file: C:/Users/vishu/AI-Synthesized-Voice-Generalization-main/train.list
+test_file: C:/Users/vishu/AI-Synthesized-Voice-Generalization-main/test.list
+dataset_root: C:/Users/vishu/AI-Synthesized-Voice-Generalization-main/datasets/FakeAVCeleb_audio
+train_batchSize: 8
+test_batchSize: 8
+workers: 2
+save_ckpt: True
+save_feat: True
+label_dict: {'real': 0, 'fake': 1}
+optimizer: {'type': 'adam', 'adam': {'lr': 0.0001, 'beta1': 0.9, 'beta2': 0.999, 'eps': 1e-08, 'weight_decay': 0.0005, 'amsgrad': False}}
+nEpochs: 20
+start_epoch: 0
+save_epoch: 1
+rec_iter: 100
+manualSeed: 1024
+cuda: True
+cudnn: True
+loss_func: {'cls_loss': 'cross_entropy', 'spe_loss': 'cross_entropy', 'con_loss': 'contrastive_regularization', 'rec_loss': 'l1loss'}
+metric_scoring: auc
+
+2026-05-09 02:02:34,091 - INFO - Save log to training/logs/fakeavceleb_main
+2026-05-09 02:02:34,091 - INFO - --------------- Configuration ---------------
+2026-05-09 02:02:34,092 - INFO - Parameters: 
+log_dir: training/logs/fakeavceleb_main
+device: cuda
+pretrained: False
+model_name: AudioFakeDetector
+backbone_name: rawnet2
+encoder_feat_dim: 512
+backbone_config: {'num_classes': 2, 'device': 'cuda', 'nb_classes': 2, 'in_channels': 1, 'filts': [128, [128, 128], [128, 512], [512, 512]], 'first_conv': 1024, 'gru_node': 1024, 'nb_gru_layer': 3, 'nb_fc_node': 1024, 'nb_samp': 64000, 'mode': 'adjust_channel', 'dropout': 0.05}
+dataset_type: pair-audio
+train_dataset: ['train.list']
+test_dataset: ['test.list']
+train_file: C:/Users/vishu/AI-Synthesized-Voice-Generalization-main/train.list
+test_file: C:/Users/vishu/AI-Synthesized-Voice-Generalization-main/test.list
+dataset_root: C:/Users/vishu/AI-Synthesized-Voice-Generalization-main/datasets/FakeAVCeleb_audio
+train_batchSize: 8
+test_batchSize: 8
+workers: 2
+save_ckpt: True
+save_feat: True
+label_dict: {'real': 0, 'fake': 1}
+optimizer: {'type': 'adam', 'adam': {'lr': 0.0001, 'beta1': 0.9, 'beta2': 0.999, 'eps': 1e-08, 'weight_decay': 0.0005, 'amsgrad': False}}
+nEpochs: 20
+start_epoch: 0
+save_epoch: 1
+rec_iter: 100
+manualSeed: 1024
+cuda: True
+cudnn: True
+loss_func: {'cls_loss': 'cross_entropy', 'spe_loss': 'cross_entropy', 'con_loss': 'contrastive_regularization', 'rec_loss': 'l1loss'}
+metric_scoring: auc
+
+2026-05-09 02:04:39,011 - INFO - Save log to training/logs/fakeavceleb_main
+2026-05-09 02:04:39,011 - INFO - --------------- Configuration ---------------
+2026-05-09 02:04:39,011 - INFO - Parameters: 
+log_dir: training/logs/fakeavceleb_main
+device: cuda
+pretrained: False
+lr_scheduler: None
+model_name: AudioFakeDetector
+backbone_name: rawnet2
+encoder_feat_dim: 512
+backbone_config: {'num_classes': 2, 'device': 'cuda', 'nb_classes': 2, 'in_channels': 1, 'filts': [128, [128, 128], [128, 512], [512, 512]], 'first_conv': 1024, 'gru_node': 1024, 'nb_gru_layer': 3, 'nb_fc_node': 1024, 'nb_samp': 64000, 'mode': 'adjust_channel', 'dropout': 0.05}
+dataset_type: pair-audio
+train_dataset: ['train.list']
+test_dataset: ['test.list']
+train_file: C:/Users/vishu/AI-Synthesized-Voice-Generalization-main/train.list
+test_file: C:/Users/vishu/AI-Synthesized-Voice-Generalization-main/test.list
+dataset_root: C:/Users/vishu/AI-Synthesized-Voice-Generalization-main/datasets/FakeAVCeleb_audio
+train_batchSize: 8
+test_batchSize: 8
+workers: 2
+save_ckpt: True
+save_feat: True
+label_dict: {'real': 0, 'fake': 1}
+optimizer: {'type': 'adam', 'adam': {'lr': 0.0001, 'beta1': 0.9, 'beta2': 0.999, 'eps': 1e-08, 'weight_decay': 0.0005, 'amsgrad': False}}
+nEpochs: 20
+start_epoch: 0
+save_epoch: 1
+rec_iter: 100
+manualSeed: 1024
+cuda: True
+cudnn: True
+loss_func: {'cls_loss': 'cross_entropy', 'spe_loss': 'cross_entropy', 'con_loss': 'contrastive_regularization', 'rec_loss': 'l1loss'}
+metric_scoring: auc
+
+2026-05-09 02:05:52,886 - INFO - Save log to training/logs/fakeavceleb_main
+2026-05-09 02:05:52,886 - INFO - --------------- Configuration ---------------
+2026-05-09 02:05:52,886 - INFO - Parameters: 
+log_dir: training/logs/fakeavceleb_main
+device: cuda
+pretrained: False
+lr_scheduler: None
+sam_param: {'rho': 0.05, 'use_adaptive_sam': False}
+model_name: AudioFakeDetector
+backbone_name: rawnet2
+encoder_feat_dim: 512
+backbone_config: {'num_classes': 2, 'device': 'cuda', 'nb_classes': 2, 'in_channels': 1, 'filts': [128, [128, 128], [128, 512], [512, 512]], 'first_conv': 1024, 'gru_node': 1024, 'nb_gru_layer': 3, 'nb_fc_node': 1024, 'nb_samp': 64000, 'mode': 'adjust_channel', 'dropout': 0.05}
+dataset_type: pair-audio
+train_dataset: ['train.list']
+test_dataset: ['test.list']
+train_file: C:/Users/vishu/AI-Synthesized-Voice-Generalization-main/train.list
+test_file: C:/Users/vishu/AI-Synthesized-Voice-Generalization-main/test.list
+dataset_root: C:/Users/vishu/AI-Synthesized-Voice-Generalization-main/datasets/FakeAVCeleb_audio
+train_batchSize: 8
+test_batchSize: 8
+workers: 2
+save_ckpt: True
+save_feat: True
+label_dict: {'real': 0, 'fake': 1}
+optimizer: {'type': 'adam', 'adam': {'lr': 0.0001, 'beta1': 0.9, 'beta2': 0.999, 'eps': 1e-08, 'weight_decay': 0.0005, 'amsgrad': False}}
+nEpochs: 20
+start_epoch: 0
+save_epoch: 1
+rec_iter: 100
+manualSeed: 1024
+cuda: True
+cudnn: True
+loss_func: {'cls_loss': 'cross_entropy', 'spe_loss': 'cross_entropy', 'con_loss': 'contrastive_regularization', 'rec_loss': 'l1loss'}
+metric_scoring: auc
+
+2026-05-09 02:06:49,726 - INFO - Save log to training/logs/fakeavceleb_main
+2026-05-09 02:06:49,726 - INFO - --------------- Configuration ---------------
+2026-05-09 02:06:49,726 - INFO - Parameters: 
+log_dir: training/logs/fakeavceleb_main
+logdir: ./logs
+device: cuda
+ngpu: 1
+pretrained: False
+lr_scheduler: None
+manualSeed: 1024
+sam_param: {'rho': 0.05, 'use_adaptive_sam': False}
+model_name: AudioFakeDetector
+backbone_name: rawnet2
+encoder_feat_dim: 512
+backbone_config: {'num_classes': 2, 'device': 'cuda', 'nb_classes': 2, 'in_channels': 1, 'filts': [128, [128, 128], [128, 512], [512, 512]], 'first_conv': 1024, 'gru_node': 1024, 'nb_gru_layer': 3, 'nb_fc_node': 1024, 'nb_samp': 64000, 'mode': 'adjust_channel', 'dropout': 0.05}
+dataset_type: pair-audio
+train_dataset: ['train.list']
+test_dataset: ['test.list']
+train_file: C:/Users/vishu/AI-Synthesized-Voice-Generalization-main/train.list
+test_file: C:/Users/vishu/AI-Synthesized-Voice-Generalization-main/test.list
+dataset_root: C:/Users/vishu/AI-Synthesized-Voice-Generalization-main/datasets/FakeAVCeleb_audio
+train_batchSize: 8
+test_batchSize: 8
+workers: 2
+save_ckpt: True
+save_feat: True
+label_dict: {'real': 0, 'fake': 1}
+optimizer: {'type': 'adam', 'adam': {'lr': 0.0001, 'beta1': 0.9, 'beta2': 0.999, 'eps': 1e-08, 'weight_decay': 0.0005, 'amsgrad': False}}
+nEpochs: 20
+start_epoch: 0
+save_epoch: 1
+rec_iter: 100
+cuda: True
+cudnn: True
+loss_func: {'cls_loss': 'cross_entropy', 'spe_loss': 'cross_entropy', 'con_loss': 'contrastive_regularization', 'rec_loss': 'l1loss'}
+metric_scoring: auc
+
+2026-05-09 02:06:50,784 - INFO - ===> Epoch[0] start!
+2026-05-09 02:06:50,786 - INFO - data_dict saved to training/logs/fakeavceleb_main\AudioFakeDetector_2026-05-09-02-06-50\train\train.list\data_dict_train.pickle
+2026-05-09 02:08:28,897 - INFO - Save log to training/logs/fakeavceleb_main
+2026-05-09 02:08:28,897 - INFO - --------------- Configuration ---------------
+2026-05-09 02:08:28,897 - INFO - Parameters: 
+log_dir: training/logs/fakeavceleb_main
+device: cuda
+ngpu: 1
+pretrained: False
+lr_scheduler: None
+manualSeed: 1024
+sam_param: {'rho': 0.05, 'use_adaptive_sam': False}
+model_name: AudioFakeDetector
+backbone_name: rawnet2
+encoder_feat_dim: 512
+backbone_config: {'num_classes': 2, 'device': 'cuda', 'nb_classes': 2, 'in_channels': 1, 'filts': [128, [128, 128], [128, 512], [512, 512]], 'first_conv': 1024, 'gru_node': 1024, 'nb_gru_layer': 3, 'nb_fc_node': 1024, 'nb_samp': 64000, 'mode': 'adjust_channel', 'dropout': 0.05}
+dataset_type: pair-audio
+train_dataset: ['train.list']
+test_dataset: ['test.list']
+train_file: C:/Users/vishu/AI-Synthesized-Voice-Generalization-main/train.list
+test_file: C:/Users/vishu/AI-Synthesized-Voice-Generalization-main/test.list
+dataset_root: C:/Users/vishu/AI-Synthesized-Voice-Generalization-main/datasets/FakeAVCeleb_audio
+train_batchSize: 8
+test_batchSize: 8
+workers: 0
+save_ckpt: True
+save_feat: True
+label_dict: {'real': 0, 'fake': 1}
+optimizer: {'type': 'adam', 'adam': {'lr': 0.0001, 'beta1': 0.9, 'beta2': 0.999, 'eps': 1e-08, 'weight_decay': 0.0005, 'amsgrad': False}}
+nEpochs: 20
+start_epoch: 0
+save_epoch: 1
+rec_iter: 100
+cuda: True
+cudnn: True
+loss_func: {'cls_loss': 'cross_entropy', 'spe_loss': 'cross_entropy', 'con_loss': 'contrastive_regularization', 'rec_loss': 'l1loss'}
+metric_scoring: auc
+
+2026-05-09 02:08:29,947 - INFO - ===> Epoch[0] start!
+2026-05-09 02:08:29,948 - INFO - data_dict saved to training/logs/fakeavceleb_main\AudioFakeDetector_2026-05-09-02-08-29\train\train.list\data_dict_train.pickle
+2026-05-09 02:11:59,230 - INFO - Save log to training/logs/fakeavceleb_main
+2026-05-09 02:11:59,230 - INFO - --------------- Configuration ---------------
+2026-05-09 02:11:59,231 - INFO - Parameters: 
+log_dir: training/logs/fakeavceleb_main
+device: cuda
+ngpu: 1
+pretrained: False
+lr_scheduler: None
+manualSeed: 1024
+sam_param: {'rho': 0.05, 'use_adaptive_sam': False}
+model_name: AudioFakeDetector
+backbone_name: rawnet2
+encoder_feat_dim: 512
+backbone_config: {'num_classes': 2, 'device': 'cuda', 'nb_classes': 2, 'in_channels': 1, 'filts': [128, [128, 128], [128, 512], [512, 512]], 'first_conv': 1024, 'gru_node': 1024, 'nb_gru_layer': 3, 'nb_fc_node': 1024, 'nb_samp': 64000, 'mode': 'adjust_channel', 'dropout': 0.05}
+dataset_type: pair-audio
+train_dataset: ['train.list']
+test_dataset: ['test.list']
+train_file: C:/Users/vishu/AI-Synthesized-Voice-Generalization-main/train.list
+test_file: C:/Users/vishu/AI-Synthesized-Voice-Generalization-main/test.list
+dataset_root: C:/Users/vishu/AI-Synthesized-Voice-Generalization-main/datasets/FakeAVCeleb_audio
+train_batchSize: 8
+test_batchSize: 8
+workers: 0
+save_ckpt: True
+save_feat: True
+label_dict: {'real': 0, 'fake': 1}
+optimizer: {'type': 'adam', 'adam': {'lr': 0.0001, 'beta1': 0.9, 'beta2': 0.999, 'eps': 1e-08, 'weight_decay': 0.0005, 'amsgrad': False}}
+nEpochs: 20
+start_epoch: 0
+save_epoch: 1
+rec_iter: 100
+cuda: True
+cudnn: True
+loss_func: {'cls_loss': 'cross_entropy', 'spe_loss': 'cross_entropy', 'con_loss': 'contrastive_regularization', 'rec_loss': 'l1loss'}
+metric_scoring: auc
+
+2026-05-09 02:12:00,308 - INFO - ===> Epoch[0] start!
+2026-05-09 02:12:00,309 - INFO - data_dict saved to training/logs/fakeavceleb_main\AudioFakeDetector_2026-05-09-02-12-00\train\train.list\data_dict_train.pickle
+2026-05-09 02:13:29,190 - INFO - Save log to training/logs/fakeavceleb_main
+2026-05-09 02:13:29,190 - INFO - --------------- Configuration ---------------
+2026-05-09 02:13:29,190 - INFO - Parameters: 
+log_dir: training/logs/fakeavceleb_main
+device: cuda
+ngpu: 1
+pretrained: False
+lr_scheduler: None
+manualSeed: 1024
+sam_param: {'rho': 0.05, 'use_adaptive_sam': False}
+model_name: AudioFakeDetector
+backbone_name: rawnet2
+encoder_feat_dim: 512
+backbone_config: {'num_classes': 2, 'device': 'cuda', 'nb_classes': 2, 'in_channels': 1, 'filts': [128, [128, 128], [128, 512], [512, 512]], 'first_conv': 1024, 'gru_node': 1024, 'nb_gru_layer': 3, 'nb_fc_node': 512, 'nb_samp': 64000, 'mode': 'adjust_channel', 'dropout': 0.05}
+dataset_type: pair-audio
+train_dataset: ['train.list']
+test_dataset: ['test.list']
+train_file: C:/Users/vishu/AI-Synthesized-Voice-Generalization-main/train.list
+test_file: C:/Users/vishu/AI-Synthesized-Voice-Generalization-main/test.list
+dataset_root: C:/Users/vishu/AI-Synthesized-Voice-Generalization-main/datasets/FakeAVCeleb_audio
+train_batchSize: 8
+test_batchSize: 8
+workers: 0
+save_ckpt: True
+save_feat: True
+label_dict: {'real': 0, 'fake': 1}
+optimizer: {'type': 'adam', 'adam': {'lr': 0.0001, 'beta1': 0.9, 'beta2': 0.999, 'eps': 1e-08, 'weight_decay': 0.0005, 'amsgrad': False}}
+nEpochs: 20
+start_epoch: 0
+save_epoch: 1
+rec_iter: 100
+cuda: True
+cudnn: True
+loss_func: {'cls_loss': 'cross_entropy', 'spe_loss': 'cross_entropy', 'con_loss': 'contrastive_regularization', 'rec_loss': 'l1loss'}
+metric_scoring: auc
+
+2026-05-09 02:13:30,271 - INFO - ===> Epoch[0] start!
+2026-05-09 02:13:30,274 - INFO - data_dict saved to training/logs/fakeavceleb_main\AudioFakeDetector_2026-05-09-02-13-30\train\train.list\data_dict_train.pickle
+2026-05-09 02:15:00,010 - INFO - Save log to training/logs/fakeavceleb_main
+2026-05-09 02:15:00,010 - INFO - --------------- Configuration ---------------
+2026-05-09 02:15:00,011 - INFO - Parameters: 
+log_dir: training/logs/fakeavceleb_main
+device: cuda
+ngpu: 1
+pretrained: False
+lr_scheduler: None
+manualSeed: 1024
+sam_param: {'rho': 0.05, 'use_adaptive_sam': False}
+model_name: AudioFakeDetector
+backbone_name: rawnet2
+encoder_feat_dim: 1024
+backbone_config: {'num_classes': 2, 'device': 'cuda', 'nb_classes': 2, 'in_channels': 1, 'filts': [128, [128, 128], [128, 512], [512, 512]], 'first_conv': 1024, 'gru_node': 1024, 'nb_gru_layer': 3, 'nb_fc_node': 1024, 'nb_samp': 64000, 'mode': 'adjust_channel', 'dropout': 0.05}
+dataset_type: pair-audio
+train_dataset: ['train.list']
+test_dataset: ['test.list']
+train_file: C:/Users/vishu/AI-Synthesized-Voice-Generalization-main/train.list
+test_file: C:/Users/vishu/AI-Synthesized-Voice-Generalization-main/test.list
+dataset_root: C:/Users/vishu/AI-Synthesized-Voice-Generalization-main/datasets/FakeAVCeleb_audio
+train_batchSize: 8
+test_batchSize: 8
+workers: 0
+save_ckpt: True
+save_feat: True
+label_dict: {'real': 0, 'fake': 1}
+optimizer: {'type': 'adam', 'adam': {'lr': 0.0001, 'beta1': 0.9, 'beta2': 0.999, 'eps': 1e-08, 'weight_decay': 0.0005, 'amsgrad': False}}
+nEpochs: 20
+start_epoch: 0
+save_epoch: 1
+rec_iter: 100
+cuda: True
+cudnn: True
+loss_func: {'cls_loss': 'cross_entropy', 'spe_loss': 'cross_entropy', 'con_loss': 'contrastive_regularization', 'rec_loss': 'l1loss'}
+metric_scoring: auc
+
+2026-05-09 02:15:00,941 - INFO - ===> Epoch[0] start!
+2026-05-09 02:15:00,943 - INFO - data_dict saved to training/logs/fakeavceleb_main\AudioFakeDetector_2026-05-09-02-15-00\train\train.list\data_dict_train.pickle
+2026-05-09 02:19:05,376 - INFO - Save log to training/logs/fakeavceleb_main
+2026-05-09 02:19:05,376 - INFO - --------------- Configuration ---------------
+2026-05-09 02:19:05,377 - INFO - Parameters: 
+log_dir: training/logs/fakeavceleb_main
+device: cuda
+ngpu: 1
+pretrained: False
+lr_scheduler: None
+manualSeed: 1024
+sam_param: {'rho': 0.05, 'use_adaptive_sam': False}
+model_name: AudioFakeDetector
+backbone_name: rawnet2
+encoder_feat_dim: 1024
+backbone_config: {'num_classes': 2, 'device': 'cuda', 'nb_classes': 2, 'in_channels': 1, 'filts': [128, [128, 128], [128, 512], [512, 512]], 'first_conv': 1024, 'gru_node': 1024, 'nb_gru_layer': 3, 'nb_fc_node': 1024, 'nb_samp': 64000, 'mode': 'adjust_channel', 'dropout': 0.05}
+dataset_type: pair-audio
+train_dataset: ['train.list']
+test_dataset: ['test.list']
+train_file: C:/Users/vishu/AI-Synthesized-Voice-Generalization-main/train.list
+test_file: C:/Users/vishu/AI-Synthesized-Voice-Generalization-main/test.list
+dataset_root: C:/Users/vishu/AI-Synthesized-Voice-Generalization-main/datasets/FakeAVCeleb_audio
+train_batchSize: 8
+test_batchSize: 8
+workers: 0
+save_ckpt: True
+save_feat: True
+label_dict: {'real': 0, 'fake': 1}
+optimizer: {'type': 'adam', 'adam': {'lr': 0.0001, 'beta1': 0.9, 'beta2': 0.999, 'eps': 1e-08, 'weight_decay': 0.0005, 'amsgrad': False}}
+nEpochs: 20
+start_epoch: 0
+save_epoch: 1
+rec_iter: 100
+cuda: True
+cudnn: True
+loss_func: {'cls_loss': 'cross_entropy', 'spe_loss': 'cross_entropy', 'con_loss': 'contrastive_regularization', 'rec_loss': 'l1loss'}
+metric_scoring: auc
+
+2026-05-09 02:19:06,516 - INFO - ===> Epoch[0] start!
+2026-05-09 02:19:06,518 - INFO - data_dict saved to training/logs/fakeavceleb_main\AudioFakeDetector_2026-05-09-02-19-06\train\train.list\data_dict_train.pickle
+2026-05-09 02:20:50,354 - INFO - Save log to training/logs/fakeavceleb_main
+2026-05-09 02:20:50,354 - INFO - --------------- Configuration ---------------
+2026-05-09 02:20:50,354 - INFO - Parameters: 
+log_dir: training/logs/fakeavceleb_main
+device: cuda
+ngpu: 1
+pretrained: False
+lr_scheduler: None
+manualSeed: 1024
+sam_param: {'rho': 0.05, 'use_adaptive_sam': False}
+model_name: AudioFakeDetector
+backbone_name: rawnet2
+encoder_feat_dim: 1024
+backbone_config: {'num_classes': 2, 'device': 'cuda', 'nb_classes': 2, 'in_channels': 1, 'filts': [128, [128, 128], [128, 512], [512, 512]], 'first_conv': 1024, 'gru_node': 1024, 'nb_gru_layer': 3, 'nb_fc_node': 1024, 'nb_samp': 64000, 'mode': 'adjust_channel', 'dropout': 0.05}
+dataset_type: pair-audio
+train_dataset: ['train.list']
+test_dataset: ['test.list']
+train_file: C:/Users/vishu/AI-Synthesized-Voice-Generalization-main/train.list
+test_file: C:/Users/vishu/AI-Synthesized-Voice-Generalization-main/test.list
+dataset_root: C:/Users/vishu/AI-Synthesized-Voice-Generalization-main/datasets/FakeAVCeleb_audio
+train_batchSize: 8
+test_batchSize: 8
+workers: 0
+save_ckpt: True
+save_feat: True
+label_dict: {'real': 0, 'fake': 1}
+optimizer: {'type': 'adam', 'adam': {'lr': 0.0001, 'beta1': 0.9, 'beta2': 0.999, 'eps': 1e-08, 'weight_decay': 0.0005, 'amsgrad': False}}
+nEpochs: 20
+start_epoch: 0
+save_epoch: 1
+rec_iter: 100
+cuda: True
+cudnn: True
+loss_func: {'cls_loss': 'cross_entropy', 'spe_loss': 'cross_entropy', 'con_loss': 'contrastive_regularization', 'rec_loss': 'l1loss'}
+metric_scoring: auc
+
+2026-05-09 02:20:51,416 - INFO - ===> Epoch[0] start!
+2026-05-09 02:20:51,417 - INFO - data_dict saved to training/logs/fakeavceleb_main\AudioFakeDetector_2026-05-09-02-20-51\train\train.list\data_dict_train.pickle

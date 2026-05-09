@@ -46,28 +46,26 @@ logger = logging.getLogger(__name__)
 
 # 🥏 MI loss ..
 
-def compute_dim_loss(l_enc, m_enc, measure, mode):
-    '''Computes DIM loss.
-
-    Args:
-        l_enc: Local feature map encoding.
-        m_enc: Multiple globals feature map encoding.
-        measure: Type of f-divergence. For use with mode `fd`
-        mode: Loss mode. Fenchel-dual `fd`, NCE `nce`, or Donsker-Vadadhan `dv`.
-
-    Returns:
-        torch.Tensor: Loss.
-
+def compute_dim_loss(l_enc, m_enc, measure='JSD', mode='local'):
+    '''Computes DIM loss using JSD.
+    Note: We are overriding the 'mode' naming conflict here.
     '''
+    # 1. Flatten features to (Batch, Features)
+    if len(l_enc.shape) > 2:
+        l_enc = l_enc.view(l_enc.size(0), l_enc.size(1), -1).mean(2)
+    if len(m_enc.shape) > 2:
+        m_enc = m_enc.view(m_enc.size(0), m_enc.size(1), -1).mean(2)
 
-    if mode == 'fd':
-        loss = fenchel_dual_loss(l_enc, m_enc, measure=measure)
-    elif mode == 'nce':
-        loss = infonce_loss(l_enc, m_enc)
-    elif mode == 'dv':
-        loss = donsker_varadhan_loss(l_enc, m_enc)
-    else:
-        raise NotImplementedError(mode)
+    # 2. Positive pair scores (Actual Content + Common Features)
+    pos = torch.sum(l_enc * m_enc, dim=1)
+    
+    # 3. Negative pair scores (Shuffle m_enc to break the speaker link)
+    m_shuffled = m_enc[torch.randperm(m_enc.size(0))]
+    neg = torch.sum(l_enc * m_shuffled, dim=1)
+
+    # 4. Binary Cross Entropy style loss for Mutual Information
+    # This forces the model to maximize 'pos' and minimize 'neg'
+    loss = torch.mean(F.softplus(-pos) + F.softplus(neg))
 
     return loss
 
@@ -128,7 +126,7 @@ class AudioFakeDetector(AbstractDetector):
         model_config = config['backbone_config']
         backbone = backbone_class(model_config)
         # if donot load the pretrained weights, fail to get good results
-        if eval(config['pretrained']):
+        if config['pretrained'] and config['pretrained'] != 'False':
             state_dict = torch.load(config['pretrained'])
             for name, weights in state_dict.items():
                 if 'pointwise' in name:
@@ -241,7 +239,7 @@ class AudioFakeDetector(AbstractDetector):
         # 5. total loss
         loss = loss_sha + 0.1*loss_spe + 0.3*loss_reconstruction + 0.05*loss_con
         if self.config['mi_param']['mi_turn_on']:
-            loss += float(self.config['mi_param']['mi_lambda']) * loss_mi
+            loss += float(self.config['mi_param']['mi_loss_weight']) * loss_mi
 
         loss_dict = {
             'overall': loss,

@@ -281,7 +281,7 @@ class Trainer(object):
             data_dict['audio'], data_dict['label'] = data.to(device), label.to(device)
 
             # model forward without considering gradient computation
-            # predictions = self.inference(data_dict)
+            predictions = self.inference(data_dict)
             
             # compute all losses for each batch data
             # losses = self.model.get_losses(data_dict, predictions, inference=True)
