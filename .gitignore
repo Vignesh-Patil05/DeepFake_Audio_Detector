@@ -1,9 +1,43 @@
+# Environments
 .venv/
+env/
+venv/
+ENV/
+
+# Datasets (Specific & General)
 FakeAVCeleb_v1.2/
 datasets/
+data/
+*.flac
+*.wav
+
+# Python & System
 __pycache__/
-*.tar
+*.pyc
+.DS_Store
+
+# Weights and Models
 *.pth
+*.p
+*.ckpt
+
+# Temporary / Data Artifacts
+*.pickle
+*.npy
+*.npz
+*.tar
+*.zip
+*.rar
+*.7z
+
+# Logs and TensorBoard
 training/_smoke_logs/
 training/_fakeavceleb_wav16k/
+training/logs/
 training/logs_fakeavceleb/
+runs/
+
+# IDEs
+.vscode/
+.idea/
+.windsurf/
